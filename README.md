@@ -1,9 +1,9 @@
 # Tortilla-Tracker
 
 ## Project Title: 
-Tortilla Tracker
+Peace ♥ Beer
 ## Team Name: 
-Peace ♥ Tacos
+Tortilla Tracker
 ## Team Members:
 * Verónica Velez
 * Javier Lozano
@@ -11,19 +11,21 @@ Peace ♥ Tacos
 * Elizabeth Jimenez
 ## Project description:
 Web application that:
-* Finds recipes to use ingredients you already have
-* Find any kind of recipe's cuisine
-* Get approximate product price
-* Find recipes based on nutritional requirements
+* Has user authentication (registration|sign on)
+* Finds recipes to use ingredients if you already have them
+* Match drink recipe with any kind of cuisine
+* Get approximate product price as per selected recipe
+* Accepts user reviews and ratings
 Bonus:
-* Find grocery products near you
+* Find walmart products near you
+* Find your way home
 ## Sketch of final product:
 
 ## API's to be used:
-* https://www.themealdb.com/api.php
+* https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
 * Walmart API
 ## Tasks:
 - [ ] Create mockup design
 - [ ] Database handling research
 - [ ] Google Maps API research
-- [ ] Food API research
+- [ ] Drinks API research
