@@ -10,13 +10,18 @@ Peace ♥ Tacos
 * Mario Reyes
 * Elizabeth Jimenez
 ## Project description:
-Web application that displays the recipes 
+Web application that:
+* Finds recipes to use ingredients you already have
+* Find any kind of recipe's cuisine
+* Get approximate product price
+* Find recipes based on nutritional requirements
+Bonus:
+* Find grocery products near you
 ## Sketch of final product:
-![GitHub Logo](/images/logo.png)
-Format: ![Alt Text](url)
+
 ## API's to be used:
 * https://www.themealdb.com/api.php
-* 
+* Walmart API
 ## Tasks:
 - [ ] Create mockup design
 - [ ] Database handling research
