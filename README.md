@@ -20,7 +20,8 @@ Bonus:
 * Find walmart products near you.
 * Find your way home.
 ## Sketch of final product:
-
+![Sketch](a516ec80-2f30-4693-bd8d-00bc77c9722e-1.jpg)
+Format: ![Alt Text](url)
 ## API's to be used:
 * https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Alcoholic
 * Walmart API
