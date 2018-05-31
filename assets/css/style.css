@@ -95,9 +95,6 @@ body {
     #mainNav {
       padding-top: 20px;
       padding-bottom: 20px;
-      -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-      -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-      transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
       letter-spacing: 1px;
       border-bottom: none;
       background: transparent;
@@ -112,8 +109,9 @@ body {
       outline: none;
       background-color: rgba(255, 255, 255, 0.3);
     }
-    #mainNav .nav-link.active:hover {
-      color: white;
+    #mainNav .nav-link:hover {
+      color: rgb(250, 40, 222);
+      font-size: 20px;
     }
   }
   
