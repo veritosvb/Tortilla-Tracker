@@ -156,37 +156,6 @@ body {
     }
   }
   
-  .btn-circle {
-    font-size: 26px;
-    width: 55px;
-    height: 55px;
-    margin-top: 15px;
-    line-height: 45px;
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out;
-    color: white;
-    border: 2px solid white;
-    border-radius: 100% !important;
-    background: transparent;
-  }
-  
-  .btn-circle:focus, .btn-circle:hover {
-    color: white;
-    outline: none;
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .content-section {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
- 
-  
-  #map {
-    width: 100%;
-    height: 300px;
-  }
   
   @media (min-width: 992px) {
     .content-section {
@@ -206,6 +175,15 @@ body {
     transition: all 0.3s ease-in-out;
     text-transform: uppercase;
     border-radius: 0;
+  }
+
+  .btn-signIn {
+    border-radius: 90;
+    background-color: rgb(241, 46, 183);
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
   }
   
   .btn-default {
