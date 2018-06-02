@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#signIn">Sign In</a>
+                    <a id="uid" class="nav-link js-scroll-trigger" href="#signIn">Sign In</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#fixadrink">Fix a Drink</a> 
@@ -71,7 +71,7 @@
                              </select>  
                             </li> 
                             <li class="list-inline-item"></li>
-                                <a href="#">
+                                <a href="#mydrink">
                                     <i class="fas fa-beer fa-3x"></i>              
                                 </a>
                             </li> 
@@ -81,8 +81,6 @@
             </div>
         </div>
     </header>
-
-    <!-- Start of catalog section -->
 
     <section id="fixadrink" class="content-section text-center">
             <div class="container">
@@ -120,11 +118,23 @@
                 </div>
                 </div>
             </div>
-            </section>
+    </section>
         <!-- First row: Contains the buttons for the catalog sections -->
 
+    <!-- My Drink Section -->
+    <section id="mydrink" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 id="drink-name">Your Drink</h2>
+                </div>
+            </div>
         </div>
-    </section>
+     </section>
+    <!--My Drink  Sign In Section -->
+
+
+    
 
     <!-- Sign In Section -->
     <section id="signIn" class="content-section text-center">
@@ -146,7 +156,7 @@
                         
                         <a href="#" class="form-check-label" for="exampleCheck1">Forgot your password?</a>
                     </div>
-                    <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
+                    <button type="submit" onclick="signIn()" class="btn btn-signIn">Log In</button>
                     </form>
                     <br><br>
                     <a href="#" data-toggle="modal" data-target="#Registration">Not a member? Register Now!  </a>
@@ -156,6 +166,88 @@
             </div>
         </div>
     </section>
+   <!--End of  Sign In Section -->
+           <!-- Contact Section -->
+    
+           <section id="contact">
+                <div class="col-lg-8 mx-auto">   
+                    <div class="container">
+                       <form>
+                         <!-- Name input -->
+                    <div class="row">
+                        <div class="col-2"></div>
+                            <div class="col-8">     
+                                <h2 class="align-center">Contact Us</h2>         
+                                <div class="form-group">
+                                    <label for="InputName">Name:</label>
+                                    <input type="name" class="form-control" id="input-name" placeholder="Enter your name">
+                                </div>
+                            </div>
+                        <div class="col-2"></div>
+                    </div>
+                        <!-- Email address input -->
+                        <div class="row"> 
+                                <div class="col-2"></div>
+                            <div class="col-8">   
+                                <div class="form-group">
+                                    <label for="inputEmail">Email address:</label>
+                                    <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="name@example.com">
+                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone</small>
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                        <!-- Country selection -->
+                        <div class="row"> 
+                            <div class="col-2"></div>
+                             <div class="col-8">
+                                <div class="form-group">
+                                    <label for="SelectCountry">Select your country:</label>
+                                        <select class="form-control" id="select-country">
+                                            <option>Mexico</option>
+                                            <option>United States</option>
+                                            <option>Canada</option>                            
+                                        </select>
+                                </div>
+                            </div>
+                            <div class="col-2"></div>
+                        </div>
+                        <!-- Message subject input -->
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                        <div class="form-group">
+                          <label for="FormSubject">Subject:</label>
+                          <input type="password" class="form-control" id="form-subject" placeholder="">
+                        </div>
+                        </div>
+                        <div class="col-2"></div>
+                        </div>
+                        <!-- Message text input -->
+                        <div class="row">
+                            <div class="col-2"></div>
+                            <div class="col-8">
+                        <div class="form-group">
+                            <label for="InputText">Your Message:</label>
+                            <textarea class="form-control" placeholder="Description" id="form-text"></textarea> 
+                        </div>
+                        </div>
+                        <div class="col-2"></div>
+                        </div>
+                        <div class="row">
+                                <div class="col-2"></div>
+                                <div class="col-8">
+                         <button type="submit" class="btn btn-signIn" id="submit-button">Submit</button>
+                            </div>
+                         <div class="col-2"></div>
+                        </div>
+                        
+                    </form>
+                    </div>
+            
+                </div>
+            </section>
+            <!-- End of contact form Section -->
 
     <!-- Sign Up Section -->
     <div class="modal fade" id="Registration" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
@@ -174,6 +266,7 @@
                                 <div class="form-group">
                                     <label for="inputName">Name</label>
                                     <input type="name" class="form-control" id="inputName" placeholder="Enter Full Name">
+
                                 </div>
                                 <div class="form-group">
                                     <label for="zipCode">Zip Code</label>
@@ -198,125 +291,40 @@
                             </form>
                         </div>
                     </section>  
-                </div>          
+                </div>
             </div>
-        </div>
+         </div>
     </div>
-    
-    <!-- Map Section -->
-    <div id="map"></div>
 
-    <!-- Contact Section -->
-    <!-- Contact form Section -->
-    <div class="col-lg-8 mx-auto">
-    
-    <section id="contact">
-        <div class="container">
-            <form>
-                 <!-- Name input -->
-            <div class="row">
-                <div class="col-2"></div>
-                <div class="col-8">              
-                    <div class="form-group">
-                        <label for="InputName">Name:</label>
-                        <input type="name" class="form-control" id="input-name" placeholder="Enter your name">
-                    </div>
-                </div>
-                <div class="col-2"></div>
-            </div>
-                <!-- Email address input -->
-                <div class="row"> 
-                        <div class="col-2"></div>
-                    <div class="col-8">   
-                        <div class="form-group">
-                            <label for="inputEmail">Email address:</label>
-                            <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="name@example.com">
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone</small>
-                        </div>
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-                <!-- Country selection -->
-                <div class="row"> 
-                    <div class="col-2"></div>
-                     <div class="col-8">
-                <div class="form-group">
-                    <label for="SelectCountry">Select your country:</label>
-                        <select class="form-control" id="select-country">
-                            <option>Mexico</option>
-                            <option>United States</option>
-                            <option>Canada</option>                            
-                        </select>
-                
-                    </div>
-                    </div>
-                    <div class="col-2"></div>
-                </div>
-                <!-- Message subject input -->
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-8">
-                <div class="form-group">
-                  <label for="FormSubject">Subject:</label>
-                  <input type="password" class="form-control" id="form-subject" placeholder="Password">
-                </div>
-                </div>
-                <div class="col-2"></div>
-                </div>
-                <!-- Message text input -->
-                <div class="row">
-                    <div class="col-2"></div>
-                    <div class="col-8">
-                <div class="form-group">
-                    <label for="InputText">Your Message:</label>
-                    <textarea class="form-control" placeholder="Description" id="form-text"></textarea> 
-                </div>
-                </div>
-                <div class="col-2"></div>
-                </div>
-                <div class="row">
-                        <div class="col-2"></div>
-                        <div class="col-8">
-                 <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
-                    </div>
-                 <div class="col-2"></div>
-                </div>
-                
-            </form>
-            </div>
-    
-        </div>
-    </section>
-    <!-- End of contact form Section -->
     <!-- Footer -->
     <footer>
-            <div class="container">
-              <div class="row">
-                <div class="col-md-4">
-                  <span class="copyright">Copyright &copy; 2018</span>
-                </div>
-                <div class="col-md-4">
-                  <ul class="list-inline social-buttons">
-                    <li class="list-inline-item">
-                      <a href="https://twitter.com/veritosvb">
-                        <i class="fab fa-twitter"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="https://www.facebook.com/veritosvb">
-                        <i class="fab fa-facebook-f"></i>
-                      </a>
-                    </li>
-                    <li class="list-inline-item">
-                      <a href="https://www.linkedin.com/in/veronica-velez-a136a112/">
-                        <i class="fab fa-linkedin"></i>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </footer>
+    <div class="container">
+        <div class="row">
+        <div class="col-md-4">
+            <span class="copyright">Copyright &copy; 2018</span>
+        </div>
+        <div class="col-md-4">
+            <ul class="list-inline social-buttons">
+            <li class="list-inline-item">
+                <a href="https://twitter.com/veritosvb">
+                <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.facebook.com/veritosvb">
+                <i class="fab fa-facebook-f"></i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a href="https://www.linkedin.com/in/veronica-velez-a136a112/">
+                <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            </ul>
+        </div>
+        </div>
+    </div>
+    </footer>
 
     <!-- Bootstrap components -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -324,7 +332,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="assets/jquery-easing/jquery.easing.min.js"></script>
+    <script src="assets/jquery-easing/jquery.easing.js"></script>
 
     <!-- Firebase JavaScript Link -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
