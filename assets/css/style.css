@@ -22,14 +22,23 @@ body {
     font-weight: 700;
     margin: 0 0 35px;
     letter-spacing: 1px;
+    color: white;
     text-transform: uppercase;
   }
   
+  i{
+    color: white;
+  }
   p {
     font-size: 16px;
     line-height: 1.5;
     margin: 0 0 25px;
   }
+
+  .styled-select {
+     font-size: 17px;
+     }
+
   
   @media (min-width: 768px) {
     p {
@@ -95,9 +104,6 @@ body {
     #mainNav {
       padding-top: 20px;
       padding-bottom: 20px;
-      -webkit-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-      -moz-transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
-      transition: background 0.3s ease-in-out, padding-top 0.3s ease-in-out, padding-bottom 0.3s;
       letter-spacing: 1px;
       border-bottom: none;
       background: transparent;
@@ -112,8 +118,9 @@ body {
       outline: none;
       background-color: rgba(255, 255, 255, 0.3);
     }
-    #mainNav .nav-link.active:hover {
-      color: white;
+    #mainNav .nav-link:hover {
+      color: rgb(250, 40, 222);
+      font-size: 20px;
     }
   }
   
@@ -158,37 +165,6 @@ body {
     }
   }
   
-  .btn-circle {
-    font-size: 26px;
-    width: 55px;
-    height: 55px;
-    margin-top: 15px;
-    line-height: 45px;
-    -webkit-transition: background 0.3s ease-in-out;
-    -moz-transition: background 0.3s ease-in-out;
-    transition: background 0.3s ease-in-out;
-    color: white;
-    border: 2px solid white;
-    border-radius: 100% !important;
-    background: transparent;
-  }
-  
-  .btn-circle:focus, .btn-circle:hover {
-    color: white;
-    outline: none;
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .content-section {
-    padding-top: 150px;
-    padding-bottom: 150px;
-  }
- 
-  
-  #map {
-    width: 100%;
-    height: 300px;
-  }
   
   @media (min-width: 992px) {
     .content-section {
@@ -209,6 +185,33 @@ body {
     text-transform: uppercase;
     border-radius: 0;
   }
+
+  .btn-signIn {
+    border-radius: 90;
+    background-color: rgb(241, 46, 183);
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
+
+  .btn-signUp {
+    border-radius: 90;
+    background-color: greenyellow;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
+
+  .btn-cancel {
+    border-radius: 90;
+    background-color: gainsboro;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
   
   .btn-default {
     color: #42DCA3;
@@ -223,54 +226,57 @@ body {
     background-color: #42DCA3;
   }
   
-  ul.banner-social-buttons {
-    margin-top: 0;
+  #signUp {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
-  
-  @media (max-width: 1199px) {
-    ul.banner-social-buttons {
-      margin-top: 15px;
-    }
+
+  .modal{
+    color: black;
   }
-  
-  @media (max-width: 767px) {
-    ul.banner-social-buttons li {
-      display: block;
-      margin-bottom: 20px;
-      padding: 0;
-    }
-    ul.banner-social-buttons li:last-child {
-      margin-bottom: 0;
-    }
-  }
-  
+
   footer {
-    padding: 50px 0;
+    padding: 25px 0;
+    text-align: center;
   }
   
-  footer p {
-    font-size: 14px;
-    margin: 0;
+  footer span.copyright {
+    font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 90%;
+    line-height: 40px;
+    text-transform: none;
+ 
   }
   
-  ::-moz-selection {
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, 0.2);
-    text-shadow: none;
+  footer ul.quicklinks {
+    font-size: 90%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+    
   }
   
-  ::selection {
-    background: #fcfcfc;
-    background: rgba(255, 255, 255, 0.2);
-    text-shadow: none;
+  ul.social-buttons {
+    margin-bottom: 0;
   }
   
-  img::selection {
-    background: transparent;
+  ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: black;
+    border-radius: 100%;
+    outline: none;
+    background-color: gray;
   }
   
-  img::-moz-selection {
-    background: transparent;
+  ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: #42DCA3;
   }
   
 /* contact form css */
