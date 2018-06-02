@@ -173,7 +173,7 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="ModalCenterTitle">USER REGISTRATION</h5>
+                    <h5 class="modal-title regText" id="ModalCenterTitle">USER REGISTRATION</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -181,35 +181,38 @@
                 <div class="modal-body">
                     <section id="signUp" class="content-section">
                         <div class= "container ">
-                            <form>
+                            <form class = "needs-validation">
                                 <div class="form-group">
                                     <label for="inputName">Name</label>
-                                    <input type="name" class="form-control" id="entry-displayname" placeholder="Enter User Name">
+
+                                    <input type="name" class="form-control" id="inputName" placeholder="Enter Full Name" required>
+                                    <div class="invalid-tooltip">
+                                        Please provide your full name
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="zipCode">Zip Code</label>
-                                    <input type="zipcode" class="form-control" id="entry-zipCode" placeholder="Enter Zip Code">
+                                    <input type="zipcode" class="form-control" id="zipCode" placeholder="Enter Zip Code" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail">Email address</label>
-                                    <input type="email" class="form-control" id="entry-email" placeholder="Enter email">
+                                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter email" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword">Password</label>
-                                    <input type="password" class="form-control" id="entry-password" placeholder="Password">
+                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword2">Confirm Password</label>
-                                    <input type="password" class="form-control" id="entry-password-2" placeholder="Confirm Password">
+                                    <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" required>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-cancel" data-dismiss="modal">CANCEL</button>
+                                    <button type="submit" class="btn btn-signUp">REGISTER</button>
                                 </div>
                             </form>
                         </div>
                     </section>  
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-cancel" data-dismiss="modal">CANCEL</button>
-                <button type="button" onclick="sendChatMessage()" class="btn btn-signUp">REGISTER</button>
-                </div>
             </div>
         </div>
     </div>
