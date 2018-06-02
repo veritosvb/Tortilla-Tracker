@@ -53,21 +53,65 @@
        
     </nav>
 
-        <!-- Intro Header -->
+    <!-- Intro Header -->
     <header class="masthead">
         <div class="intro-body">
             <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                <h1 class="brand-heading">Peace ❤ Drinks</h1>
-                <p class="intro-text">  
-                    <input type="text" placeholder="Add ingredient" id="entry-email" required></p>                   
-            
+                 <div class="row">
+                    <div class="col-lg-9 mx-auto">
+                        <h1 class="brand-heading">Peace ❤ Drinks</h1>
+                        <div class="styled-select col-lg-6 mx-auto"> 
+                            <select class="custom-select custom-select-m mb-3" id="entry-email">
+                                <optgroup>
+                                    <option class="optionsize"selected>Pick something to drink!</option>
+                                    <option value="1">Tequila</option>
+                                    <option value="2">Whisky</option>
+                                    <option value="3">Wine</option>
+                                </optgroup>
+                                <a class="btn">search</a>
+                            </select>   
+                            
+                        </div>
+                     </div>
                 </div>
-            </div>
             </div>
         </div>
     </header>
+
+    <!-- Start of catalog section -->
+
+    <section class="container mb-3">
+        <!-- First row: Contains the buttons for the catalog sections -->
+        <div class="row mb-3">
+            <div class="col text-center">
+                <button class="btn">Tequila</button>
+                <button class="btn">Whisky</button>
+                <button class="btn">Wine</button>
+            </div>
+        </div>
+        <div class="row">
+            <!-- This column contains the side menu with the subcategories -->
+            <div class="col-3">
+                <!-- Subcategories are contained as list items -->
+                <ul class="list-group-flush">
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                  </ul>
+            </div>
+            <!-- this column will contain the images for the recipes -->
+            <div class="col">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+            </div>
+        </div>
+    </section>
 
     <!-- Sign In Section -->
     <section id="signIn" class="content-section text-center">
@@ -86,7 +130,8 @@
                         <input type="password" id="password"class="form-control" id="exampleInputPassword1" placeholder="Password">
                     </div>
                     <div class="form-check">
-                        <a href="forgotmypassword" id="forgot" class="form-check-label" for="exampleCheck1">Forgot my password</label>
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Remember me</label>
                     </div>
                     <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
                     </form>
@@ -132,7 +177,6 @@
                 <div class="col-lg-8 mx-auto">
                     <h2>Contact</h2>
                     <div class="container">
-               
                     </div>
                 </div>
                 </div>
@@ -143,6 +187,25 @@
     <footer>
         <div class="container text-center">
             <p>Copyright &copy; Tequila Tracker 2018</p>
+            <div class="social-icons">
+                    <ul class="list-unstyled text-center mb-0">
+                      <li class="list-unstyled-item">
+                        <a href="#">
+                          <i class="fa fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-unstyled-item">
+                        <a href="#">
+                          <i class="fa fa-facebook"></i>
+                        </a>
+                      </li>
+                      <li class="list-unstyled-item">
+                        <a href="#">
+                          <i class="fa fa-instagram"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
         </div>
     </footer>
 
