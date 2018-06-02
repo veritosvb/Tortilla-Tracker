@@ -191,6 +191,24 @@ body {
     padding-right: 50px;
 
   }
+
+  .btn-signUp {
+    border-radius: 90;
+    background-color: greenyellow;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
+
+  .btn-cancel {
+    border-radius: 90;
+    background-color: gainsboro;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+
+  }
   
   .btn-default {
     color: #42DCA3;
@@ -203,6 +221,15 @@ body {
     border: 1px solid #42DCA3;
     outline: none;
     background-color: #42DCA3;
+  }
+  
+  #signUp {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .modal{
+    color: black;
   }
   
   ul.banner-social-buttons {

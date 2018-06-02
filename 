@@ -1,0 +1,115 @@
+[33mcommit aa20a60cd27585ae99fc579d9c03cb3d065a43f7[m[33m ([m[1;36mHEAD -> [m[1;32mjavier[m[33m)[m
+Merge: b401cf9 a048768
+Author: Javier <javier2_90@hotmail.com>
+Date:   Thu May 31 21:04:29 2018 -0500
+
+    Merge branch 'master' into javier
+
+[33mcommit b401cf97ef2158fb411d68a5afdb0353b3e8b5a7[m[33m ([m[1;31morigin/javier[m[33m)[m
+Author: Javier <javier2_90@hotmail.com>
+Date:   Thu May 31 20:54:14 2018 -0500
+
+    added custom select
+
+[33mcommit a0487684918d47c0b2190f941abec4c46dd78776[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: ffb9645 35e9672
+Author: veritosvb <36939671+veritosvb@users.noreply.github.com>
+Date:   Thu May 31 20:42:59 2018 -0500
+
+    Merge pull request #1 from veritosvb/veronica
+    
+    Sign in section
+
+[33mcommit 35e96724ca29138860361f50023fe6bc1b5df09f[m[33m ([m[1;31morigin/veronica[m[33m)[m
+Author: Veritosvb <vero.velez@gmail.com>
+Date:   Thu May 31 20:36:22 2018 -0500
+
+    Sign in section
+
+[33mcommit ffb96459520bb2dedf2b4c8e37c28edb37929132[m
+Author: Veritosvb <vero.velez@gmail.com>
+Date:   Thu May 31 18:45:38 2018 -0500
+
+    First commit - Structure and Folders - Auth methods
+
+[33mcommit b9c29276f86b5c6c8e01f0def82d80df26c26ee4[m
+Author: Veritosvb <vero.velez@gmail.com>
+Date:   Thu May 31 18:34:17 2018 -0500
+
+    First commit - Structure and Folders - Auth methods
+
+[33mcommit a7aa06adb47e8e5a25c54d4a1f74c9d81dacf685[m[33m ([m[1;31morigin/marioreyes[m[33m)[m
+Author: Veritosvb <vero.velez@gmail.com>
+Date:   Thu May 31 18:25:28 2018 -0500
+
+    First commit - Structure and Folders - Auth methods
+
+[33mcommit c3e2dd8c7bc6b56ee15c64cba72772f26cb03160[m
+Author: Veritosvb <vero.velez@gmail.com>
+Date:   Thu May 31 18:12:14 2018 -0500
+
+    First commit - Structure and Folders - Auth methods
+
+[33mcommit ffb18d57cec074523814cb71d4bb47d293158437[m
+Author: Veritosvb <vero.velez@gmail.com>
+Date:   Thu May 31 16:35:27 2018 -0500
+
+    First commit - Structure and Folders - Auth methods
+
+[33mcommit 5fd091554f382cd3c8337161e3e1e3fa762edd35[m
+Author: veritosvb <36939671+veritosvb@users.noreply.github.com>
+Date:   Wed May 30 13:02:12 2018 -0500
+
+    Removed comment
+
+[33mcommit 4e1ce7165978d4e66f4df0b627b1ff7d2a516bbf[m
+Author: veritosvb <36939671+veritosvb@users.noreply.github.com>
+Date:   Wed May 30 13:01:30 2018 -0500
+
+    Update README.md
+    
+    Added sketch image
+
+[33mcommit 7e3b42342ff04a169e0b58e373c9ff3f94a8758e[m
+Author: veritosvb <36939671+veritosvb@users.noreply.github.com>
+Date:   Wed May 30 12:58:51 2018 -0500
+
+    Add files via upload
+    
+    image for readme
+
+[33mcommit 9d17ad5fdb920ebb13590a48908907d0f8414b54[m
+Author: elizabethjmz <34516348+elizabethjmz@users.noreply.github.com>
+Date:   Tue May 29 21:34:37 2018 -0500
+
+    Update README.md
+    
+    Added tasks activities and project description.
+
+[33mcommit 4c945655ee8c110eb149d8faf1488bac5188a577[m
+Author: elizabethjmz <34516348+elizabethjmz@users.noreply.github.com>
+Date:   Tue May 29 21:27:05 2018 -0500
+
+    Update README.md
+    
+    Updated project information
+
+[33mcommit 275f411f1737b02ce393d6fd6e6d4137e4b6a909[m
+Author: elizabethjmz <34516348+elizabethjmz@users.noreply.github.com>
+Date:   Tue May 29 20:44:13 2018 -0500
+
+    Update README.md
+
+[33mcommit 9faf02efc42bb9f37a04d2ef114083f32cf63a3d[m
+Author: elizabethjmz <34516348+elizabethjmz@users.noreply.github.com>
+Date:   Tue May 29 20:36:22 2018 -0500
+
+    Update README.md
+    
+    Adding initial project information
+
+[33mcommit 1a8a1762f0d72de94d6cc6a1ab197014d7ded0c8[m
+Author: veritosvb <36939671+veritosvb@users.noreply.github.com>
+Date:   Tue May 29 20:16:16 2018 -0500
+
+    Initial commit
