@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <!-- Custom fonts for this template -->
 
-    <link href="assets/fonts/font-awesome/" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
 
@@ -39,9 +39,6 @@
                 <a class="nav-link js-scroll-trigger" href="#signIn">Sign In</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#signIn">Sign Up</a>
-                    </li>
-                <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#fixadrink">Fix a Drink</a> 
                 <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
@@ -60,17 +57,23 @@
                  <div class="row">
                     <div class="col-lg-9 mx-auto">
                         <h1 class="brand-heading">Peace ❤ Drinks</h1>
-                        <div class="styled-select col-lg-6 mx-auto"> 
-                            <select class="custom-select custom-select-m mb-3" id="entry-email">
+                        <div class="styled-select col-lg-8 mx-auto"> 
+                          <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                              <select class="custom-select custom-select-m mb-3" id="entry-email">
                                 <optgroup>
                                     <option class="optionsize"selected>Pick something to drink!</option>
                                     <option value="1">Tequila</option>
                                     <option value="2">Whisky</option>
                                     <option value="3">Wine</option>
                                 </optgroup>
-                                <a class="btn">search</a>
-                            </select>   
-                            
+                             </select>  
+                            </li> 
+                            <li class="list-inline-item"></li>
+                                <a href="#">
+                                    <i class="fas fa-beer fa-3x"></i>              
+                                </a>
+                            </li> 
                         </div>
                      </div>
                 </div>
@@ -80,36 +83,46 @@
 
     <!-- Start of catalog section -->
 
-    <section class="container mb-3">
+ 
+    <section id="fixadrink" class="content-section text-center">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <h2>Catalog</h2>
+                    <div class="row mb-3">
+                            <div class="col text-center">
+                                <button class="btn">Tequila</button>
+                                <button class="btn">Whisky</button>
+                                <button class="btn">Wine</button>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- This column contains the side menu with the subcategories -->
+                            <div class="col-3">
+                                <!-- Subcategories are contained as list items -->
+                                <ul class="list-group-flush">
+                                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                                  </ul>
+                            </div>
+                            <!-- this column will contain the images for the recipes -->
+                            <div class="col">
+                                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                            </div>
+                </div>
+                </div>
+            </div>
+            </section>
         <!-- First row: Contains the buttons for the catalog sections -->
-        <div class="row mb-3">
-            <div class="col text-center">
-                <button class="btn">Tequila</button>
-                <button class="btn">Whisky</button>
-                <button class="btn">Wine</button>
-            </div>
-        </div>
-        <div class="row">
-            <!-- This column contains the side menu with the subcategories -->
-            <div class="col-3">
-                <!-- Subcategories are contained as list items -->
-                <ul class="list-group-flush">
-                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
-                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
-                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
-                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
-                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
-                  </ul>
-            </div>
-            <!-- this column will contain the images for the recipes -->
-            <div class="col">
-                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
-                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
-                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
-                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
-                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
-                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
-            </div>
+
         </div>
     </section>
 
@@ -203,29 +216,33 @@
 
     <!-- Footer -->
     <footer>
-        <div class="container text-center">
-            <p>Copyright &copy; Tequila Tracker 2018</p>
-            <div class="social-icons">
-                    <ul class="list-unstyled text-center mb-0">
-                      <li class="list-unstyled-item">
-                        <a href="#">
-                          <i class="fa fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li class="list-unstyled-item">
-                        <a href="#">
-                          <i class="fa fa-facebook"></i>
-                        </a>
-                      </li>
-                      <li class="list-unstyled-item">
-                        <a href="#">
-                          <i class="fa fa-instagram"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-        </div>
-    </footer>
+            <div class="container">
+              <div class="row">
+                <div class="col-md-4">
+                  <span class="copyright">Copyright &copy; 2018</span>
+                </div>
+                <div class="col-md-4">
+                  <ul class="list-inline social-buttons">
+                    <li class="list-inline-item">
+                      <a href="https://twitter.com/veritosvb">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="https://www.facebook.com/veritosvb">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li class="list-inline-item">
+                      <a href="https://www.linkedin.com/in/veronica-velez-a136a112/">
+                        <i class="fab fa-linkedin"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </footer>
 
     <!-- Bootstrap components -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -233,14 +250,17 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="assets/jquery-easing/jquery.easing.js"></script>
+    <script src="assets/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Firebase JavaScript Link -->
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
 
     <!-- Google Maps API Key -->
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
 
     <!-- Custom scripts -->
     <script src="assets/javascript/authenticate.js"></script>
-    <script src="assets/javascript/authenticate.js"></script>
+    <script src="assets/javascript/smoothscrolling.js"></script>
 
 
     </body>
