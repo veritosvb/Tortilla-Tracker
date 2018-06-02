@@ -15,12 +15,14 @@ var database = firebase.database();
 //create account
 function submitCreateAccount(){
     console.log("here");
-    var displayName = document.querySelector("#entry-displayname");
-    var email = document.querySelector("#entry-email");
-    var password = document.querySelector("#entry-password");
+    var displayName = document.querySelector("#inputName");
+    var email = document.querySelector("#inputEmail");
+    var cp = document.querySelector("#zipcode");
+    var password = document.querySelector("#inputPassword");
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
 .then(function(user){
     user.updateProfile({
+        postal: cp,
         displayName: displayName.value});   
     });            
 }
