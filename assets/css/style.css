@@ -22,14 +22,23 @@ body {
     font-weight: 700;
     margin: 0 0 35px;
     letter-spacing: 1px;
+    color: white;
     text-transform: uppercase;
   }
   
+  i{
+    color: white;
+  }
   p {
     font-size: 16px;
     line-height: 1.5;
     margin: 0 0 25px;
   }
+
+  .styled-select {
+     font-size: 17px;
+     }
+
   
   @media (min-width: 768px) {
     p {
@@ -225,36 +234,55 @@ body {
   .modal{
     color: black;
   }
-  
-  ul.banner-social-buttons {
-    margin-top: 0;
-  }
-  
-  @media (max-width: 1199px) {
-    ul.banner-social-buttons {
-      margin-top: 15px;
-    }
-  }
-  
-  @media (max-width: 767px) {
-    ul.banner-social-buttons li {
-      display: block;
-      margin-bottom: 20px;
-      padding: 0;
-    }
-    ul.banner-social-buttons li:last-child {
-      margin-bottom: 0;
-    }
-  }
-  
-  footer {
-    padding: 50px 0;
-  }
-  
-  footer p {
-    font-size: 14px;
-    margin: 0;
-  }
-  
 
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
   
+  footer span.copyright {
+    font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 90%;
+    line-height: 40px;
+    text-transform: none;
+ 
+  }
+  
+  footer ul.quicklinks {
+    font-size: 90%;
+    line-height: 40px;
+    margin-bottom: 0;
+    text-transform: none;
+    
+  }
+  
+  ul.social-buttons {
+    margin-bottom: 0;
+  }
+  
+  ul.social-buttons li a {
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    color: black;
+    border-radius: 100%;
+    outline: none;
+    background-color: gray;
+  }
+  
+  ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
+    background-color: #42DCA3;
+  }
+  
+/* contact form css */
+  #contact{
+
+    
+    padding-top: 70px;
+    
+  }
