@@ -61,13 +61,53 @@
                 <div class="col-lg-8 mx-auto">
                 <h1 class="brand-heading">Peace ❤ Drinks</h1>
                 <p class="intro-text">  
-                    <input type="text" placeholder="Add ingredient" id="entry-email" required></p>                   
+                    <select class="custom-select custom-select-lg mb-3" id="entry-email">
+                        <option selected>Pick something to drink!</option>
+                        <option value="1">Tequila</option>
+                        <option value="2">Whisky</option>
+                        <option value="3">Wine</option>
+                      </select>               
             
                 </div>
             </div>
             </div>
         </div>
     </header>
+
+    <!-- Start of catalog section -->
+
+    <section class="container mb-3">
+        <!-- First row: Contains the buttons for the catalog sections -->
+        <div class="row mb-3">
+            <div class="col text-center">
+                <button class="btn">Tequila</button>
+                <button class="btn">Whisky</button>
+                <button class="btn">Wine</button>
+            </div>
+        </div>
+        <div class="row">
+            <!-- This column contains the side menu with the subcategories -->
+            <div class="col-3">
+                <!-- Subcategories are contained as list items -->
+                <ul class="list-group-flush">
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                    <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Subitem</li>
+                  </ul>
+            </div>
+            <!-- this column will contain the images for the recipes -->
+            <div class="col">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+                <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
+            </div>
+        </div>
+    </section>
 
     <!-- Sign In Section -->
     <section id="signIn" class="content-section text-center">
