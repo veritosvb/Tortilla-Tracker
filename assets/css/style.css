@@ -100,6 +100,11 @@ body {
     background-color: transparent;
   }
   
+  #fixadrink .container{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 60px 0;
+  }
+
   @media (min-width: 992px) {
     #mainNav {
       padding-top: 20px;
@@ -187,12 +192,12 @@ body {
   }
 
   .btn-signIn {
+    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     border-radius: 90;
     background-color: rgb(241, 46, 183);
-    padding: 10px;
-    padding-left: 50px;
-    padding-right: 50px;
-
+    color:lightgray;
+    font-weight: bold;
+    font-size: 12px;
   }
 
   .btn-signUp {
@@ -224,6 +229,10 @@ body {
     border: 1px solid #42DCA3;
     outline: none;
     background-color: #42DCA3;
+  }
+
+  .drink-image{
+    max-width: 200px;
   }
   
   #signUp {
