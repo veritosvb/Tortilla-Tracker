@@ -1,23 +1,21 @@
-// Registration validation for submissions if there are invalid fields
-(function() {
-    'use strict';
-    window.addEventListener('load', function() {
-    // Fetch all the forms we want to apply custom Bootstrap validation styles to
-    var forms = document.getElementsByClassName('needs-validation');
-    // Loop over them and prevent submission
-    var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-            //Validate if password is the same as confirm password
-            if ($("#inputPassword").val().trim() != $("#inputPassword2").val().trim()) {
-                alert ("Password does not match, please enter the same password");
-            }
+//To clear content of fields if user clicks on Cancel button
+$("#cancel").on("click", function(){
+    $("#inputName").val("");
+    $("#zipCode").val("");
+    $("#inputEmail").val("");
+    $("#inputPassword").val("");
+    $("#inputPassword2").val("");
+});
+
+//Validation if user does not enter the same password at user registration
+$("#register").on("click", function(){
+    if (($("#inputName").val())!= "" && ($("#zipCode").val()) != "" && ($("#inputEmail").val()) != "") {
+        if (($("#inputPassword").val().trim()) != ($("#inputPassword2").val().trim())) {
+            alert ("Password does not match");
         }
-        form.classList.add('was-validated');
-        }, false);
-    });
-    }, false);
-})();
+        else {
+            submitCreateAccount();
+        }
+    }
+});
 
