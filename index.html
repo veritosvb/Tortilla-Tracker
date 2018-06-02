@@ -36,7 +36,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#signIn">Sign In</a>
+                    <a id="uid" class="nav-link js-scroll-trigger" href="#signIn">Sign In</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#fixadrink">Fix a Drink</a> 
@@ -71,7 +71,7 @@
                              </select>  
                             </li> 
                             <li class="list-inline-item"></li>
-                                <a href="#">
+                                <a href="#mydrink">
                                     <i class="fas fa-beer fa-3x"></i>              
                                 </a>
                             </li> 
@@ -123,8 +123,17 @@
             </section>
         <!-- First row: Contains the buttons for the catalog sections -->
 
+    <!-- Sign In Section -->
+    <section id="mydrink" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2 id="drink-name">Your Drink</h2>
+                </div>
+            </div>
         </div>
-    </section>
+     </section>
+       <!--End of  Sign In Section -->
 
     <!-- Sign In Section -->
     <section id="signIn" class="content-section text-center">
@@ -146,7 +155,7 @@
                         
                         <a href="#" class="form-check-label" for="exampleCheck1">Forgot your password?</a>
                     </div>
-                    <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
+                    <button type="submit" onclick="signIn()" class="btn btn-signIn">Log In</button>
                     </form>
                     <br><br>
                     <a href="#" data-toggle="modal" data-target="#Registration">Not a member? Register Now!  </a>
@@ -156,6 +165,8 @@
             </div>
         </div>
     </section>
+   <!--End of  Sign In Section -->
+
 
     <!-- Sign Up Section -->
     <div class="modal fade" id="Registration" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
@@ -173,23 +184,23 @@
                             <form>
                                 <div class="form-group">
                                     <label for="inputName">Name</label>
-                                    <input type="name" class="form-control" id="inputName" placeholder="Enter Full Name">
+                                    <input type="name" class="form-control" id="entry-displayname" placeholder="Enter User Name">
                                 </div>
                                 <div class="form-group">
                                     <label for="zipCode">Zip Code</label>
-                                    <input type="zipcode" class="form-control" id="zipCode" placeholder="Enter Zip Code">
+                                    <input type="zipcode" class="form-control" id="entry-zipCode" placeholder="Enter Zip Code">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputEmail">Email address</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter email">
+                                    <input type="email" class="form-control" id="entry-email" placeholder="Enter email">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password">
+                                    <input type="password" class="form-control" id="entry-password" placeholder="Password">
                                 </div>
                                 <div class="form-group">
                                     <label for="inputPassword2">Confirm Password</label>
-                                    <input type="password2" class="form-control" id="inputPassword2" placeholder="Confirm Password">
+                                    <input type="password" class="form-control" id="entry-password-2" placeholder="Confirm Password">
                                 </div>
                             </form>
                         </div>
@@ -197,7 +208,7 @@
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-cancel" data-dismiss="modal">CANCEL</button>
-                <button type="button" class="btn btn-signUp">REGISTER</button>
+                <button type="button" onclick="sendChatMessage()" class="btn btn-signUp">REGISTER</button>
                 </div>
             </div>
         </div>
@@ -208,19 +219,22 @@
 
     <!-- Contact Section -->
     <!-- Contact form Section -->
-    <div class="col-lg-8 mx-auto">
+    
     <section id="contact">
-        <div class="container">
-            <form>
+        <div class="col-lg-8 mx-auto">   
+            <div class="container">
+               
+               <form>
                  <!-- Name input -->
             <div class="row">
                 <div class="col-2"></div>
-                <div class="col-8">              
-                    <div class="form-group">
-                        <label for="InputName">Name:</label>
-                        <input type="name" class="form-control" id="input-name" placeholder="Enter your name">
+                    <div class="col-8">     
+                        <h2 class="align-center">Contact Us</h2>         
+                        <div class="form-group">
+                            <label for="InputName">Name:</label>
+                            <input type="name" class="form-control" id="input-name" placeholder="Enter your name">
+                        </div>
                     </div>
-                </div>
                 <div class="col-2"></div>
             </div>
                 <!-- Email address input -->
@@ -239,15 +253,14 @@
                 <div class="row"> 
                     <div class="col-2"></div>
                      <div class="col-8">
-                <div class="form-group">
-                    <label for="SelectCountry">Select your country:</label>
-                        <select class="form-control" id="select-country">
-                            <option>Mexico</option>
-                            <option>United States</option>
-                            <option>Canada</option>                            
-                        </select>
-                
-                    </div>
+                        <div class="form-group">
+                            <label for="SelectCountry">Select your country:</label>
+                                <select class="form-control" id="select-country">
+                                    <option>Mexico</option>
+                                    <option>United States</option>
+                                    <option>Canada</option>                            
+                                </select>
+                        </div>
                     </div>
                     <div class="col-2"></div>
                 </div>
@@ -257,7 +270,7 @@
                     <div class="col-8">
                 <div class="form-group">
                   <label for="FormSubject">Subject:</label>
-                  <input type="password" class="form-control" id="form-subject" placeholder="Password">
+                  <input type="password" class="form-control" id="form-subject" placeholder="">
                 </div>
                 </div>
                 <div class="col-2"></div>
@@ -276,7 +289,7 @@
                 <div class="row">
                         <div class="col-2"></div>
                         <div class="col-8">
-                 <button type="submit" class="btn btn-primary" id="submit-button">Submit</button>
+                 <button type="submit" class="btn btn-signIn" id="submit-button">Submit</button>
                     </div>
                  <div class="col-2"></div>
                 </div>
@@ -323,7 +336,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
 
     <!-- Plugin JavaScript -->
-    <script src="assets/jquery-easing/jquery.easing.min.js"></script>
+    <script src="assets/jquery-easing/jquery.easing.js"></script>
 
     <!-- Firebase JavaScript Link -->
     <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>

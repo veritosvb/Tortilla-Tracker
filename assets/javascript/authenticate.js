@@ -9,8 +9,6 @@ var config = {
     messagingSenderId: "575910252489"
 };
 firebase.initializeApp(config);
-
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
 var database = firebase.database();
   
 
@@ -37,16 +35,14 @@ firebase.auth().signOut().then(function() {
 
 //sign in account
 function signIn(){
-    
     var email = $("#email").val();
     var password = $("#password").val();
 
-
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
+    
     var errorCode = error.code;
     var errorMessage = error.message;
-    // ...
+    
     });
 }
 
