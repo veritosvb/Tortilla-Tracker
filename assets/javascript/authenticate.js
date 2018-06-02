@@ -9,20 +9,20 @@ var config = {
     messagingSenderId: "575910252489"
 };
 firebase.initializeApp(config);
-
-var ui = new firebaseui.auth.AuthUI(firebase.auth());
 var database = firebase.database();
   
 
 //create account
 function submitCreateAccount(){
     console.log("here");
-    var displayName = document.querySelector("#entry-displayname");
-    var email = document.querySelector("#entry-email");
-    var password = document.querySelector("#entry-password");
+    var displayName = document.querySelector("#inputName");
+    var email = document.querySelector("#inputEmail");
+    var cp = document.querySelector("#zipcode");
+    var password = document.querySelector("#inputPassword");
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
 .then(function(user){
     user.updateProfile({
+        postal: cp,
         displayName: displayName.value});   
     });            
 }
@@ -37,16 +37,14 @@ firebase.auth().signOut().then(function() {
 
 //sign in account
 function signIn(){
-    
     var email = $("#email").val();
     var password = $("#password").val();
 
-
     firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    // Handle Errors here.
+    
     var errorCode = error.code;
     var errorMessage = error.message;
-    // ...
+    
     });
 }
 
