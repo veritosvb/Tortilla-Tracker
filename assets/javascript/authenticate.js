@@ -1,4 +1,3 @@
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyAh7vemESSPj1BUmLpF5HbSEudr2mnEf3s",
@@ -14,17 +13,31 @@ var database = firebase.database();
 
 //create account
 function submitCreateAccount(){
-    console.log("here");
     var displayName = document.querySelector("#inputName");
     var email = document.querySelector("#inputEmail");
     var cp = document.querySelector("#zipcode");
     var password = document.querySelector("#inputPassword");
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
 .then(function(user){
+        alert("Account registered successfully!");   
+        $('#Registration').modal('hide');         
+            $("#inputName").val("");
+            $("#zipCode").val("");
+            $("#inputEmail").val("");
+            $("#inputPassword").val("");
+            $("#inputPassword2").val(""); 
     user.updateProfile({
         postal: cp,
         displayName: displayName.value});   
-    });            
+    }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        alert (errorMessage);
+
+      });        
+   
 }
  
 //signout account
