@@ -54,7 +54,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     name = user.displayName;
     email = user.email;
     uid = user.uid;  
-    $("#uid").text("Sign in as: " + email);
+    $("#uid").text("Sign out");
 
   }
   else{
