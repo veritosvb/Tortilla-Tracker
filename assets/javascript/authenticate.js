@@ -1,4 +1,3 @@
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyAh7vemESSPj1BUmLpF5HbSEudr2mnEf3s",
@@ -14,17 +13,31 @@ var database = firebase.database();
 
 //create account
 function submitCreateAccount(){
-    console.log("here");
     var displayName = document.querySelector("#inputName");
     var email = document.querySelector("#inputEmail");
     var cp = document.querySelector("#zipcode");
     var password = document.querySelector("#inputPassword");
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
 .then(function(user){
+        alert("Account registered successfully!");   
+        $('#Registration').modal('hide');         
+            $("#inputName").val("");
+            $("#zipCode").val("");
+            $("#inputEmail").val("");
+            $("#inputPassword").val("");
+            $("#inputPassword2").val(""); 
     user.updateProfile({
         postal: cp,
         displayName: displayName.value});   
-    });            
+    }).catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        // ...
+        alert (errorMessage);
+
+      });        
+   
 }
  
 //signout account
@@ -54,7 +67,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     name = user.displayName;
     email = user.email;
     uid = user.uid;  
-    $("#uid").text("Sign in as: " + email);
+    $("#uid").text("Sign out");
 
   }
   else{
@@ -62,3 +75,37 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
+$("#form-id").on("submit", function(event){
+    
+    event.preventDefault();
+   
+   var name = $("#input-name").val().trim();
+   var email = $("#input-email").val().trim();
+   var country = $("#select-country").val().trim();
+   var subject = $("#form-subject").val().trim();
+   var message = $("#form-text").val().trim();
+   
+   console.log(name);
+   console.log(email);
+   console.log(country);
+   console.log(subject);
+   console.log(message);
+   
+   database.ref("/contact").push({
+
+       name:name,
+       email:email,
+       country:country,
+       subject:subject,
+       message:message,
+
+   });
+
+   $("#input-name").val("");
+   $("#input-email").val("");
+   $("#select-country").val("");
+   $("#form-subject").val("");
+   $("#form-text").val("");
+
+   });
+   
