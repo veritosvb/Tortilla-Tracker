@@ -1,5 +1,5 @@
 
-  // Initialize Firebase
+ // Initialize Firebase
   var config = {
     apiKey: "AIzaSyAh7vemESSPj1BUmLpF5HbSEudr2mnEf3s",
     authDomain: "homework-83ba8.firebaseapp.com",
@@ -14,32 +14,55 @@ var database = firebase.database();
   
 
 //create account
-function submitCreateAccount(){
-    var displayName = document.querySelector("#inputName");
-    var email = document.querySelector("#inputEmail");
-    var cp = document.querySelector("#zipcode");
-    var password = document.querySelector("#inputPassword");
-    firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
-.then(function(user){
-        alert("Account registered successfully!");   
-        $('#Registration').modal('hide');         
-            $("#inputName").val("");
-            $("#zipCode").val("");
-            $("#inputEmail").val("");
-            $("#inputPassword").val("");
-            $("#inputPassword2").val(""); 
-    user.updateProfile({
-        postal: cp,
-        displayName: displayName.value});   
-    }).catch(function(error) {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        alert (errorMessage);
-      });        
-   
+function submitCreateAccount(displayName,email,cp,password){
+
+        firebase.auth().createUserWithEmailAndPassword(email, password)
+        .then(function(user){
+            
+            var user = firebase.auth().currentUser;
+            clearRegistration();
+            $("#RegistrationModal").modal("hide");
+
+            user.updateProfile({
+                displayName: "Jane Q. User",
+                zipcode: cp
+            }).then(function() {
+                modalAlert("Account registered successfully!");   
+            }).catch(function(error) {
+                modalAlert(error.message);   
+
+            });
+
+        }).catch(function(error) {
+            modalAlert(error.message);
+        }); 
+            
+             
 }
- 
+
+function clearRegistration(){
+    $('#Registration').modal('hide');         
+    $("#inputName").val("");
+    $("#zipCode").val("");
+    $("#inputEmail").val("");
+    $("#inputPassword").val("");
+    $("#inputPassword2").val(""); 
+}
+
+function checkRegistrationModal(name,email,cp,pass){
+    if (name != "" ||  email != "" || cp != "" || pass!= "") {
+        if (pass == ($("#inputPassword2").val())) {
+            return true;
+        }else{
+            modalAlert("Password does not match");
+            return false;
+        }
+    }else{
+        modalAlert("Please fill the required info");
+        return false;
+    }
+}
+
 //signout account
 firebase.auth().signOut().then(function() {
     // Sign-out successful.
@@ -50,16 +73,21 @@ firebase.auth().signOut().then(function() {
 
 //sign in account
 function signIn(){
-    var email = $("#email").val();
-    var password = $("#password").val();
+    var email = $("#emailSI").val().trim();
+    var password = $("#passwordSI").val().trim();
 
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
-    
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    
-    });
+    if(email == "" || password == ""){
+        modalAlert("Please fill Email address and password");
+    }else{
+
+        console.log("sending to Firebase.., email " + email + " and password " + password);
+
+        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+            modalAlert(error.message);
+        });
+    }
 }
+
 
 
 firebase.auth().onAuthStateChanged(function(user) {
@@ -67,7 +95,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     name = user.displayName;
     email = user.email;
     uid = user.uid;  
-    $("#uid").text("Sign out");
+    $("#navSignIn").text("Sign out");
 
   }
   else{
@@ -78,18 +106,75 @@ firebase.auth().onAuthStateChanged(function(user) {
 * Events 
 *
 */
+$("#signIn").click(function(event){
+    event.preventDefault();
+    console.log("sign in")
+    signIn();
+});
 
-$("#cfsubmit").click(function(event){
-    $("#error-message").text("Thank you for contacting us. We will gate in touch as soon as posible");
-    $("#error").attr("data-toggle", "modal");
+$("#forgotPassword").click(function(event){
+    console.log("forgot password");
+
+});
+
+$("#forgotPassword").click(function(event){
+    console.log("forgot password");
+
+});
+
+
+var userAccountMessage = "Account created successfully";
+
+//To clear content of fields if user clicks on Cancel button
+$("#cancel").on("click", function(){
+    $("#inputName").val("");
+    $("#zipCode").val("");
+    $("#inputEmail").val("");
+    $("#inputPassword").val("");
+    $("#inputPassword2").val("");
+});
+
+//Validation if user does not enter the same password at user registration
+$("#modalRegistration").on("click", function(){
+    console.log("registration modal opening");
 
     event.preventDefault();
+    $("#RegistrationModal").attr("data-toggle", "modal");
+    $("#RegistrationModal").modal('show');
 
-   var name = $("#input-name").val().trim();
-   var email = $("#input-email").val().trim();
+});
+
+
+$("#register").on("click", function(){
+    event.preventDefault();
+    var displayName = $("#inputName").val().trim();
+    var email = $("#inputEmail").val().trim();
+    var cp = $("#zipCode").val().trim();
+    var password = $("#inputPassword").val();
+
+    console.log("registering User");
+    console.log(displayName);
+    console.log(email);
+    console.log(cp);
+    console.log(password);
+   
+    if(checkRegistrationModal(displayName,email,cp,password)){
+        submitCreateAccount(displayName,email,cp,password)
+    }
+
+    
+});
+
+
+
+$("#cfsubmit").click(function(event){
+  modalAlert("Thank you for contacting us. We will gate in touch as soon as posible");
+
+   var name = $("#nameC").val().trim();
+   var email = $("#emailC").val().trim();
    var country = $('#select-country').find(":selected").text();
    var subject = $("#form-subject").val().trim();
-   var message = $("#form-text").val().trim();
+   var message = $("#messageC").val().trim();
    
    console.log(name);
    console.log(email);
@@ -97,7 +182,7 @@ $("#cfsubmit").click(function(event){
    console.log(subject);
    console.log(message);
    
-   database.ref("/contact").push({
+   firebase.database().ref("/contact").push({
        name:name,
        email:email,
        country:country,
@@ -105,7 +190,6 @@ $("#cfsubmit").click(function(event){
        message:message,
    });
 
-   $("#error-message").text("Thank you for contacting us. We will gate in touch as soon as posible");
    $("#error").modal('show');
    $("#input-name").val("");
    $("#input-email").val("");
@@ -115,3 +199,9 @@ $("#cfsubmit").click(function(event){
 
    });
    
+
+function modalAlert(message){
+    $("#error-message").text(message);
+    $("#error").attr("data-toggle", "modal");
+    $("#error").modal('show');
+}

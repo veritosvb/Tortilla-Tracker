@@ -30,6 +30,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
+            <a id="uid" href=""></a>
             <a class="navbar-brand js-scroll-trigger" href="#page-top">Peace ❤ Drinks</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
@@ -38,16 +39,13 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a id="uid" class="nav-link js-scroll-trigger" href="#signIn">Sign In</a>
+                    <a id="navSignIn" class="nav-link js-scroll-trigger" href="#signInSection">Sign In</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#fixadrink">Fix a Drink</a> 
                 </li>
                 <li class="nav-item">
                     <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#signOut">Sign Out</a>
                 </li>
             </ul>
             </div>
@@ -199,32 +197,34 @@
     
 
     <!-- Sign In Section -->
-    <section id="signIn" class="content-section text-center">
+    <section id="signInSection" class="content-section text-center">
         <div class="container">
             <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <h2>Sign In</h2>
-                <form>
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
-                        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" id="password"class="form-control" id="exampleInputPassword1" placeholder="Password">
-                    </div>
-                    <div class="form-check">
-                        
-                        <a href="#" class="form-check-label" for="exampleCheck1">Forgot your password?</a>
-                    </div>
-                    <button type="submit" onclick="signIn()" class="btn btn-signIn">Log In</button>
-                </form>
-                <br><br>
-                <a href="#" data-toggle="modal" data-target="#Registration">Not a member? Register Now!  </a>
-
+                <div class="col-lg-8 mx-auto">
+                    <h2>Sign In</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="emailSI" aria-describedby="emailHelp" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" id="passwordSI"class="form-control" id="exampleInputPassword1" required>
+                        </div>
+                        <div class="form-check">
+                            <a href="#" class="form-check-label" id="forgotPassword">Forgot your password?</a>
+                        </div>
+                        <div>
+                        <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
+                        </div>
+                    </form>
                 </div>
-            </div>
+            </div>   
+            <div class="row">   
+                <div class="col-lg-8 mx-auto p-5">
+                        <a href="#" data-toggle="modal" data-target="#RegistrationModal">Not a member? Register Now!  </a> 
+                </div> 
             </div>
         </div>
     </section>
@@ -241,11 +241,11 @@
                     <form>
                         <div class="form-group">
                             <label for="InputName">Name:</label>
-                            <input type="name" class="form-control" id="input-name" placeholder="Enter your name">
+                            <input type="name" class="form-control" id="nameC" placeholder="Enter your name">
                         </div>
                         <div class="form-group">
                             <label for="inputEmail">Email address:</label>
-                            <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="name@example.com" required>
+                            <input type="email" class="form-control" id="emailC" aria-describedby="emailHelp" placeholder="name@example.com" required>
                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone</small>
                         </div>
                         <div class="form-group">
@@ -262,7 +262,7 @@
                         </div>
                         <div class="form-group">
                             <label for="InputText">Your Message:</label>
-                            <textarea class="form-control" rows=10 placeholder="Description" id="form-text"></textarea> 
+                            <textarea class="form-control" rows=10 placeholder="Description" id="messageC"></textarea> 
                         </div>
                     </div>
                 </div>
@@ -277,7 +277,7 @@
             <!-- End of contact form Section -->
 
 <!-- Sign Up Section -->
-<div class="modal fade" id="Registration" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="RegistrationModal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -292,7 +292,7 @@
                         <form>
                             <div class="form-group">
                                 <label for="inputName">Name</label>
-                                <input type="name" class="form-control" id="inputName" placeholder="Enter Full Name" required>
+                                <input type="name" class="form-control" id="inputName" placeholder="Enter Username" required>
                             </div>
                             <div class="form-group">
                                 <label for="zipCode">Zip Code</label>
