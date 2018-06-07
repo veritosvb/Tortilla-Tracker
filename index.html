@@ -13,7 +13,12 @@
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-    <!--Bulma -->
+    <!-- jQuery link -->
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+   
     
     <!-- Custom fonts for this template -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
@@ -30,24 +35,24 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
         <div class="container">
-            <a id="uid" href=""></a>
+            <a class="navbar-brand" id="uid"></a>
             <a class="navbar-brand js-scroll-trigger" href="#page-top">Peace ❤ Drinks</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
             Menu
             <i class="fa fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a id="navSignIn" class="nav-link js-scroll-trigger" href="#signInSection">Sign In</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#fixadrink">Fix a Drink</a> 
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
-                </li>
-            </ul>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a id="navSignIn" class="nav-link js-scroll-trigger" href="#signInSection">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#fixadrink">Fix a Drink</a> 
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                    </li>
+                </ul>
             </div>
         </div>
 
@@ -85,7 +90,20 @@
         </div>
     </header>
 
-    <section id="fixadrink" class="content-section text-center">
+        <!-- My Drink Section -->
+        <section id="mydrink" class="content-section text-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                            <h2 id="drink-name">Your Drink</h2>
+                        </div>
+                    </div>
+                </div>
+             </section>
+            <!--My Drink  Sign In Section -->
+        
+
+    <section id="fixadrink" class="content-section text-center everyother">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 mx-auto">
@@ -94,38 +112,62 @@
                                 <aside class="col-12 col-md-2 p-0 navbar-catalog">
                                     <nav class="navbar navbar-catalog navbar-expand navbar-dark navbar-catalog flex-md-column flex-row align-items-start py-2">
                                         <div class="navbar-catalog collapse navbar-collapse">
+                                            
                                             <ul class="flex-md-column flex-row navbar-nav navbar-catalog w-100 justify-content-between">
-
-                                                <li class="nav-item">
-                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-heart-o fa-fw"></i> <span class="d-none d-md-inline">Ordinary Drink</span></a>
+                                                <li class="nav-item ">
+                                                    <a class="nav-link pl-0" href="#"><i class="fas fa-glass-martini"></i> <span class="d-none d-md-inline">Ordinary Drink</span></a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-book fa-fw"></i> <span class="d-none d-md-inline">Cocktail</span></a>
+                                                    <a class="nav-link pl-0" href="#"><i class="fas fa-glass-martini"></i> <span class="d-none d-md-inline">Cocktail</span></a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-heart fa-fw"></i> <span class="d-none d-md-inline">Milk / Float / Shake</span></a>
+                                                    <a class="nav-link pl-0" href="#"><i class="fas fa-glass-martini"></i> <span class="d-none d-md-inline">Milk / Float / Shake</span></a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">Cocoa</span></a>
+                                                    <a class="nav-link pl-0" href="#"><i class="fas fa-glass-martini"></i> <span class="d-none d-md-inline">Cocoa</span></a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Shot</span></a>
+                                                    <a class="nav-link pl-0" href="#"><i class="fas fa-glass-martini"></i> <span class="d-none d-md-inline">Shot</span></a>
                                                 </li>
                                                 <li class="nav-item">
-                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Coffee</span></a>
+                                                    <a class="nav-link pl-0" href="#"><i class="fas fa-glass-martini"></i> <span class="d-none d-md-inline">Coffee</span></a>
                                                 </li>
                                                 <li class="nav-item">
-                                                        <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Homemade Liqueur</span></a>
+                                                        <a class="nav-link pl-0" href="#"><i class="fas fa-glass-martini"></i> <span class="d-none d-md-inline">Homemade Liqueur</span></a>
                                                 </li>  
                                                 <li class="nav-item">
-                                                        <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Punch / Party Drink</span></a>
+                                                        <a class="nav-link pl-0" href="#"><i class="fas fa-glass-martini"></i> <span class="d-none d-md-inline">Punch / Party Drink</span></a>
                                                  </li>                                                                                     
                                             </ul>
                                         </div>
                                     </nav>
                                 </aside>
                                 <main class="col bg-faded py-3">
-                                    <h2>Catalog</h2>
+                                        <nav class="navbar navbar-expand-lg navbar-light relative-top" id="mainNav">
+                                                <div class="container">
+                                                    <a class="navbar-brand" id="uid"></a>
+                                                    <a class="navbar-brand js-scroll-trigger" href="#page-top"><h2>Catalog</h2></a>
+                                                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive2" aria-controls="navbarResponsive2" aria-expanded="false" aria-label="Toggle navigation">
+                                                    Menu
+                                                    <i class="fa fa-bars"></i>
+                                                    </button>
+                                                    <div class="collapse navbar-collapse" id="navbarResponsive2">
+                                                        <ul class="navbar-nav ml-auto">
+                                                            <li class="nav-item">
+                                                                <a id="navSignIn" class="nav-link " >Tequila</a>
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link " >Whisky</a> 
+                                                            </li>
+                                                            <li class="nav-item">
+                                                                <a class="nav-link " >Wine</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                            </nav>
+                                    
                                     <div class="row drink-images">
 
                                          
@@ -181,17 +223,6 @@
     </section>
         <!-- First row: Contains the buttons for the catalog sections -->
 
-    <!-- My Drink Section -->
-    <section id="mydrink" class="content-section text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 mx-auto">
-                    <h2 id="drink-name">Your Drink</h2>
-                </div>
-            </div>
-        </div>
-     </section>
-    <!--My Drink  Sign In Section -->
 
 
     
@@ -233,7 +264,7 @@
 
            <!-- Contact Section -->
     
-           <section id="contact" class="content-section text-center">
+           <section id="contact" class="content-section text-center everyother">
             <div class="container">
                 <div class="row">
                 <div class="col-lg-8 mx-auto">
@@ -367,15 +398,10 @@
     </div>
     </footer>
 
-    <!-- jQuery link -->
-    <script
-    src="https://code.jquery.com/jquery-3.3.1.min.js"
-    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-    crossorigin="anonymous"></script>
-    <!-- Bootstrap components -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-
+     <!-- Bootstrap components -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+ 
     <!-- Plugin JavaScript -->
     <script src="assets/jquery-easing/jquery.easing.js"></script>
 
@@ -389,7 +415,6 @@
     <!-- Custom scripts -->
     <script src="assets/javascript/authenticate.js"></script>
     <script src="assets/javascript/smoothscrolling.js"></script>
-    <script src="assets/javascript/signup_login.js"></script>
     <script src="assets/javascript/fetch-drink.js"></script>
 
     </body>

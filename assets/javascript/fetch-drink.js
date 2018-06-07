@@ -28,8 +28,7 @@ $(document).ready(function() {
         })
         .done(function(response) {
             $('.drink-images').empty();
-            console.log(queryURL);
-            console.log(response);
+
             //Saves the drinks matrix on a new variable to go down one level
             let drinkArr = response.drinks;
             console.log(drinkArr);
@@ -48,12 +47,11 @@ $(document).ready(function() {
                 //pushed the object to the object array
                 drinkObjectArr.push(bebida);
             }
-            console.log(drinkObjectArr);
             
             //Goes through the object array and looks for the name and image, then appends them to a div
             for(let j=0; j<drinkArr.length;j++){
                 //Let created inside the for so the append is not overwritten
-                let drinkDiv = $('<div class="col-lg-3 col-md-4 col-5">');
+                let drinkDiv = $('<div class="col-lg-3 col-md-4 col-sm-5 col-xm-6">');
                 let drinkName = $("<p>");
                 let drinkImg = $("<img>");
                 //Adding attribute and class to the image
@@ -77,9 +75,7 @@ $(document).ready(function() {
 
     //Listens for a drink element press
     $(document).on('click','.drink-element',function(event){
-        console.log(event);
-        console.log(event.target);
-        
+
         console.log($(event.target).attr("drink-id"));
         //Saves the id of the clicked item on a variable
         let id = $(event.target).attr("drink-id")
