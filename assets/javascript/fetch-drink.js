@@ -28,7 +28,6 @@ $(document).ready(function() {
         })
         .done(function(response) {
             $('.drink-images').empty();
-
             //Saves the drinks matrix on a new variable to go down one level
             let drinkArr = response.drinks;
             console.log(drinkArr);
@@ -79,6 +78,8 @@ $(document).ready(function() {
         console.log($(event.target).attr("drink-id"));
         //Saves the id of the clicked item on a variable
         let id = $(event.target).attr("drink-id")
+        let imageSelected = $(event.target).attr("src")
+        
         //Saves the query to a variable
         var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+id; ;
         //Calling the ajax for the drink ID

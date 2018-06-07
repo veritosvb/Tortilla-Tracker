@@ -1,6 +1,12 @@
+$.get("/navbar.html", function(data){
+  $("#nav-placeholder").replaceWith(data);
+});
+
 (function($) {
     "use strict"; // Start of use strict
+
   
+    
     // Smooth scrolling using jQuery easing
     $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
       if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
@@ -41,20 +47,5 @@
   
   })(jQuery); // End of use strict
 
-  $(function(){
-
-    $('#slide-submenu').on('click',function() {			        
-        $(this).closest('.list-group').fadeOut('slide',function(){
-        	$('.mini-submenu').fadeIn();	
-        });
-        
-      });
-
-	$('.mini-submenu').on('click',function(){		
-        $(this).next('.list-group').toggle('slide');
-        $('.mini-submenu').hide();
-	})
-})
  
-  
   
