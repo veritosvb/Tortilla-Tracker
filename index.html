@@ -12,8 +12,10 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-    <!-- Custom fonts for this template -->
 
+    <!--Bulma -->
+    
+    <!-- Custom fonts for this template -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
@@ -71,7 +73,7 @@
                              </select>  
                             </li> 
                             <li class="list-inline-item"></li>
-                                <a href="#mydrink">
+                                <a class= "js-scroll-trigger" href="#fixadrink">
                                     <i class="fas fa-beer fa-3x call-drink"></i>              
                                 </a>
                             </li> 
@@ -83,6 +85,59 @@
     </header>
 
     <section id="fixadrink" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mx-auto">
+                    <div class="container-fluid h-100">
+                            <div class="row h-100">
+                                <aside class="col-12 col-md-2 p-0 navbar-catalog">
+                                    <nav class="navbar navbar-catalog navbar-expand navbar-dark navbar-catalog flex-md-column flex-row align-items-start py-2">
+                                        <div class="navbar-catalog collapse navbar-collapse">
+                                            <ul class="flex-md-column flex-row navbar-nav navbar-catalog w-100 justify-content-between">
+
+                                                <li class="nav-item">
+                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-heart-o fa-fw"></i> <span class="d-none d-md-inline">Ordinary Drink</span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-book fa-fw"></i> <span class="d-none d-md-inline">Cocktail</span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-heart fa-fw"></i> <span class="d-none d-md-inline">Milk / Float / Shake</span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-star fa-fw"></i> <span class="d-none d-md-inline">Cocoa</span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Shot</span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Coffee</span></a>
+                                                </li>
+                                                <li class="nav-item">
+                                                        <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Homemade Liqueur</span></a>
+                                                </li>  
+                                                <li class="nav-item">
+                                                        <a class="nav-link pl-0" href="#"><i class="fa fa-list fa-fw"></i> <span class="d-none d-md-inline">Punch / Party Drink</span></a>
+                                                 </li>                                                                                     
+                                            </ul>
+                                        </div>
+                                    </nav>
+                                </aside>
+                                <main class="col bg-faded py-3">
+                                    <h2>Catalog</h2>
+                                    <div class="row drink-images">
+
+                                         
+                                    </div>
+
+
+                                </main>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!--
             <div class="container mb-5 rounded">
                 <div class="row">
                 <div class="col-lg-12 mx-auto">
@@ -95,9 +150,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <!-- This column contains the side menu with the subcategories -->
                             <div class="col-3">
-                                <!-- Subcategories are contained as list items -->
                                 <ul class="list-group-flush">
                                     <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Ordinary Drink</li>
                                     <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Cocktail</li>
@@ -110,7 +163,6 @@
                                     <li class="list-group-item list-group-item-action list-group-item-secondary btn-signIn">Soft Drink / Soda</li>
                                   </ul>
                             </div>
-                            <!-- this column will contain the images for the recipes -->
                             <div class="col drink-images">
                                 <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
                                 <img class="mb-1" src="assets/images/beer.jpeg" alt="stock beer image">
@@ -122,6 +174,9 @@
                 </div>
                 </div>
             </div>
+
+        -->
+
     </section>
         <!-- First row: Contains the buttons for the catalog sections -->
 
@@ -161,9 +216,9 @@
                         <a href="#" class="form-check-label" for="exampleCheck1">Forgot your password?</a>
                     </div>
                     <button type="submit" onclick="signIn()" class="btn btn-signIn">Log In</button>
-                    </form>
-                    <br><br>
-                    <a href="#" data-toggle="modal" data-target="#Registration">Not a member? Register Now!  </a>
+                </form>
+                <br><br>
+                <a href="#" data-toggle="modal" data-target="#Registration">Not a member? Register Now!  </a>
 
                 </div>
             </div>
@@ -171,134 +226,113 @@
         </div>
     </section>
    <!--End of  Sign In Section -->
+
+
            <!-- Contact Section -->
     
-           <section id="contact">
-                <div class="col-lg-8 mx-auto">   
-                    <div class="container">
-                       <form id="form-id">
-                         <!-- Name input -->
-                    <div class="row">
-                        <div class="col-2"></div>
-                            <div class="col-8">     
-                                <h2 class="align-center">Contact Us</h2>         
-                                <div class="form-group">
-                                    <label for="InputName">Name:</label>
-                                    <input type="name" class="form-control" id="input-name" placeholder="Enter your name">
-                                </div>
-                            </div>
-                        <div class="col-2"></div>
-                    </div>
-                        <!-- Email address input -->
-                        <div class="row"> 
-                                <div class="col-2"></div>
-                            <div class="col-8">   
-                                <div class="form-group">
-                                    <label for="inputEmail">Email address:</label>
-                                    <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="name@example.com">
-                                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone</small>
-                                </div>
-                            </div>
-                            <div class="col-2"></div>
-                        </div>
-                        <!-- Country selection -->
-                        <div class="row"> 
-                            <div class="col-2"></div>
-                             <div class="col-8">
-                                <div class="form-group">
-                                    <label for="SelectCountry">Select your country:</label>
-                                        <select class="form-control" id="select-country">
-                                            <option>Mexico</option>
-                                            <option>United States</option>
-                                            <option>Canada</option>                            
-                                        </select>
-                                </div>
-                            </div>
-                            <div class="col-2"></div>
-                        </div>
-                        <!-- Message subject input -->
-                        <div class="row">
-                            <div class="col-2"></div>
-                            <div class="col-8">
+           <section id="contact" class="content-section text-center">
+            <div class="container">
+                <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Contact us</h2>
+                    <form>
                         <div class="form-group">
-                          <label for="FormSubject">Subject:</label>
-                          <input type="text" class="form-control" id="form-subject" placeholder="">
+                            <label for="InputName">Name:</label>
+                            <input type="name" class="form-control" id="input-name" placeholder="Enter your name">
                         </div>
+                        <div class="form-group">
+                            <label for="inputEmail">Email address:</label>
+                            <input type="email" class="form-control" id="input-email" aria-describedby="emailHelp" placeholder="name@example.com" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone</small>
                         </div>
-                        <div class="col-2"></div>
+                        <div class="form-group">
+                            <label for="SelectCountry">Select your country:</label>
+                            <select class="form-control" id="select-country">
+                                <option>Mexico</option>
+                                <option>United States</option>
+                                <option>Canada</option>                            
+                            </select>
                         </div>
-                        <!-- Message text input -->
-                        <div class="row">
-                            <div class="col-2"></div>
-                            <div class="col-8">
+                        <div class="form-group">
+                            <label for="FormSubject">Subject:</label>
+                            <input type="text" class="form-control" id="form-subject" placeholder="">
+                        </div>
                         <div class="form-group">
                             <label for="InputText">Your Message:</label>
-                            <textarea class="form-control" placeholder="Description" id="form-text"></textarea> 
+                            <textarea class="form-control" rows=10 placeholder="Description" id="form-text"></textarea> 
                         </div>
-                        </div>
-                        <div class="col-2"></div>
-                        </div>
-                        <div class="row">
-                                <div class="col-2"></div>
-                                <div class="col-8">
-                         <button type="submit" class="btn btn-signIn" id="submit">Submit</button>
-                            </div>
-                         <div class="col-2"></div>
-                        </div>
-                        
-                    </form>
                     </div>
-            
                 </div>
-            </section>
+                <div class="row">
+                        <div class="col-lg-8 mx-auto">
+                                <button type="submit" class="btn btn-ctf" id="cfsubmit">Submit</button>
+                        </div>
+                </div>
+            </form>
+        </div>
+    </section>
             <!-- End of contact form Section -->
 
-    <!-- Sign Up Section -->
-    <div class="modal fade" id="Registration" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title regText" id="ModalCenterTitle">USER REGISTRATION</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <section id="signUp" class="content-section">
-                        <div class= "container ">
-                            <form>
-                                <div class="form-group">
-                                    <label for="inputName">Name</label>
-                                    <input type="name" class="form-control" id="inputName" placeholder="Enter Full Name" required>
-
-                                </div>
-                                <div class="form-group">
-                                    <label for="zipCode">Zip Code</label>
-                                    <input type="zipcode" class="form-control" id="zipCode" placeholder="Enter Zip Code" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputEmail">Email address</label>
-                                    <input type="email" class="form-control" id="inputEmail" placeholder="Enter email" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword">Password</label>
-                                    <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="inputPassword2">Confirm Password</label>
-                                    <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" required>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" class="btn btn-cancel" data-dismiss="modal" id="cancel">CANCEL</button>
-                                    <button type="submit" class="btn btn-signUp" id="register">REGISTER</button>
-                                </div>
-                            </form>
-                        </div>
-                    </section>  
-                </div>
+<!-- Sign Up Section -->
+<div class="modal fade" id="Registration" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title regText" id="ModalCenterTitle">USER REGISTRATION</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-         </div>
+            <div class="modal-body">
+                <section id="signUp" class="content-section">
+                    <div class= "container ">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputName">Name</label>
+                                <input type="name" class="form-control" id="inputName" placeholder="Enter Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="zipCode">Zip Code</label>
+                                <input type="zipcode" class="form-control" id="zipCode" placeholder="Enter Zip Code" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputEmail">Email address</label>
+                                <input type="email" class="form-control" id="inputEmail" placeholder="Enter email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword">Password</label>
+                                <input type="password" class="form-control" id="inputPassword" placeholder="Password" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputPassword2">Confirm Password</label>
+                                <input type="password" class="form-control" id="inputPassword2" placeholder="Confirm Password" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-cancel" data-dismiss="modal" id="cancel">CANCEL</button>
+                                <button type="submit" class="btn btn-signUp" id="register">REGISTER</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>  
+            </div>
+        </div>
+        </div>
+</div>
+<!-- modal Sign Up -->
+
+<!-- errors modal -->
+<div class="modal bd-example-modal-lg fade" id="error" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-body">
+            <div class="modal-content">
+                <div class="container">
+                <p id="error-message"></p>
+                </div>
+             </div>
+        </div> 
     </div>
+</div>
+<!-- end errors -->
 
     <!-- Footer -->
     <footer>
@@ -353,8 +387,6 @@
     <script src="assets/javascript/authenticate.js"></script>
     <script src="assets/javascript/smoothscrolling.js"></script>
     <script src="assets/javascript/signup_login.js"></script>
-
-
     <script src="assets/javascript/fetch-drink.js"></script>
 
     </body>

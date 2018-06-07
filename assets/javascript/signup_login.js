@@ -14,7 +14,8 @@ $("#register").on("click", function(){
     if (($("#inputName").val())!= "" && ($("#zipCode").val()) != "" && ($("#inputEmail").val()) != "" && ($("#inputPassword").val())!= "" && ($("#inputPassword2").val())!= "") {
 
         if (($("#inputPassword").val().trim()) != ($("#inputPassword2").val().trim())) {
-            alert ("Password does not match");
+            $("#error-message").text("Password does not match");
+            $("#error").show();
         }
         else {
             submitCreateAccount();

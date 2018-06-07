@@ -100,9 +100,9 @@ body {
     background-color: transparent;
   }
   
-  #fixadrink .container{
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 60px 0;
+  .navbar-catalog{
+    background-color:  rgb(122, 114, 231);
+    color:black;
   }
 
   @media (min-width: 992px) {
@@ -197,8 +197,19 @@ body {
     background-color: rgb(241, 46, 183);
     color:lightgray;
     font-weight: bold;
-    font-size: 12px;
+    font-size: 14px;
   }
+
+
+  .btn-ctf {
+    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border-radius: 90;
+    background-color: rgb(46, 228, 241);
+    color:black;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
 
   .btn-signUp {
     border-radius: 90;

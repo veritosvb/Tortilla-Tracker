@@ -1,3 +1,4 @@
+// global variables
 var liquor = "";
 var drinkObjectArr =[];
 
@@ -6,13 +7,17 @@ $(document).ready(function() {
 
     $(".call-drink").click(function(event) {
         event.preventDefault();
-        console.log($(event.target).is('i'));
+        console.log("what is this");
         
-        if($(event.target).is("i")){
-            liquor = $('#drink-option').find(":selected").text();
-        } else {
-            liquor = $(this.val().trim());
+
+        liquor = $('#drink-option').find(":selected").text();
+
+        if(liquor == "Pick something to drink!")
+        {
+            alert("No liquor selection made - Default tequila");
+            liquor = "Tequila";
         }
+    
         console.log(liquor);   
 
         var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + liquor ;
@@ -48,6 +53,7 @@ $(document).ready(function() {
             //Goes through the object array and looks for the name and image, then appends them to a div
             for(let j=0; j<drinkArr.length;j++){
                 //Let created inside the for so the append is not overwritten
+                let drinkDiv = $('<div class="col-lg-3 col-md-4 col-5">');
                 let drinkName = $("<p>");
                 let drinkImg = $("<img>");
                 //Adding attribute and class to the image
@@ -61,8 +67,10 @@ $(document).ready(function() {
                 drinkName.addClass("drink-element");
                 drinkName.attr("drink-id", drinkObjectArr[j].id);
                 //Appends to the div
-                $(".drink-images").append(drinkImg);
-                $(".drink-images").append(drinkName);
+                drinkDiv.append(drinkImg);
+                drinkDiv.append(drinkName);
+                $(".drink-images").append(drinkDiv);
+
             }
         });
     });
