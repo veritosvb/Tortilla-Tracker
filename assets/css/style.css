@@ -136,6 +136,13 @@ body {
     }
   }
   
+  .card{
+    color: black;
+  }
+
+  .card-header{
+    color: black;
+  }
   .masthead {
     display: table;
     width: 100%;
