@@ -137,14 +137,32 @@ $(document).ready(function() {
         $('.instructions-div').empty();
         $('.ingredient-list').empty();
         $('.drink-images').show();
+        $('.favorite.btn').attr("id","");
+        $('.favorite-icon').removeClass("fas");
+        $('.favorite-icon').addClass("far");
     });
 
     $('.favorite.btn').click(function(){
         let exists = 0;
-        let id = $(event.target).attr("id");
-        let source = $(event.target).attr("source");
+        console.log("favorite button");
+        let id;
+        let source;
+        console.log(event.target);
+        if($(event.target).is("i")){
+            id = $(event.target).closest("button").attr("id");
+            source = $(event.target).closest("button").attr("source");
+            console.log("entro 1");
+            
+        } else {
+            id = $(event.target).attr("id");
+            source = $(event.target).attr("source");
+            console.log("entro 2");
+        }
+        console.log(id);
+        
+        
         for(let i = 0; i < favoritesArr.length;i++){
-            if(favoritesArr[i] === id){
+            if(favoritesArr[i].id === id){
                 exists = 1;
                 $('.favorite-icon').removeClass("fas");
                 $('.favorite-icon').addClass("far");
@@ -154,20 +172,27 @@ $(document).ready(function() {
         if(exists === 0){
             $('.favorite-icon').removeClass("far");
             $('.favorite-icon').addClass("fas");
-            favoritesArr.push(id, source);
+            let favoriteInfo = {id: id, source: source};
+            favoritesArr.push(favoriteInfo);
         }
         console.log("favorites");
         console.log(favoritesArr);
-        
-        
+        updateFavorites();
     });
 }); 
 
-function updateFavorites(id, source){
+function updateFavorites(){
+    console.log("favorite images");
+    
     $('.favorite-images').empty();
-    for(let i = 0; i < favoritesArr; i++){
-        let favoriteImageDiv = $("<div>");
+    let favoriteImageDiv = $("<div>");
+    for(let i = 0; i < favoritesArr.length; i++){
         let favoriteImageImg = $("<img>");
+        //let favoriteImageName = $("<p>");
+        favoriteImageImg.addClass("drink-image");
+        favoriteImageImg.addClass("drink-element");
+        favoriteImageImg.attr("src",favoritesArr[i].source);
+        favoriteImageDiv.append(favoriteImageImg);
+        $('.favorite-images').append(favoriteImageDiv);
     }
-
 }
