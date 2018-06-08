@@ -80,8 +80,6 @@ function signIn(){
         modalAlert("Please fill Email address and password");
     }else{
 
-        console.log("sending to Firebase.., email " + email + " and password " + password);
-
         firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
             modalAlert(error.message);
         });
@@ -94,9 +92,13 @@ firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     name = user.displayName;
     email = user.email;
-    uid = user.uid;  
+    uid = user.displayName;  
+    console.log(uid);
     $("#navSignIn").text("Sign out");
-
+    $("#uid").append('<i class="fas fa-user"></i>');
+    $("#emailSI").text("");
+    $("#passwordSI").text("");
+    modalAlert("Welcome to our page!! Happy drinks");
   }
   else{
       //user not signed in
@@ -136,8 +138,6 @@ $("#cancel").on("click", function(){
 
 //Validation if user does not enter the same password at user registration
 $("#modalRegistration").on("click", function(){
-    console.log("registration modal opening");
-
     event.preventDefault();
     $("#RegistrationModal").attr("data-toggle", "modal");
     $("#RegistrationModal").modal('show');
