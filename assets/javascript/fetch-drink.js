@@ -201,10 +201,13 @@ function ingredients(ingArray){
     console.log(response);
     console.log(response.items["0"].name);
     console.log(response.items["0"].salePrice);
+
     var itemName = response.items["0"].name;
     var itemPrice = response.items["0"].salePrice;
+
     console.log("name: " + itemName + " USD");
     console.log("price: "+ itemPrice + " USD");
+    
     $(".walmart-list").append(itemName);
     $(".walmart-list").append(itemPrice);
 
