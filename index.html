@@ -141,9 +141,9 @@
 
      <!-- Start of catalog -->
     <section id="fixadrink" class="content-section text-center ">
-        <div class="container">
+        <div class="container container-fluid h-100 ">
             <div class="row">
-                <div class="col-lg-12 mx-auto">
+                <div class="col-lg-12 mx-auto transbox">
                     <div class="container-fluid h-100">
                         <nav class="navbar navbar-expand-lg navbar-light2 relative-top" id="mainNav">
                             <div class="container">
@@ -171,48 +171,45 @@
                                 </div>
                             </div>
                         </nav>
-                                    <!-- Div where the fetched drink data is inserted -->
-                                    <div class="row drink-images ">
+                            <!-- Div where the fetched drink data is inserted -->
+                            <div class="row drink-images ">
+                            </div>
+                            <!-- Div that displays the information for a drink -->
+                            <div class="drink-information container">
+                                <div class="row">
+                                    <!-- Column for image and recipe -->
+                                    <div class="col-8">
+                                        <div class="row"><img src="#" class="drink-info-image"></div>
+                                        <div class="row instructions-div"></div>
                                     </div>
-                                    <!-- Div that displays the information for a drink -->
-                                    <div class="drink-information container">
+                                    <!-- Column for ingredients and activities -->
+                                    <div class="col-4">
                                         <div class="row">
-                                            <!-- Column for image and recipe -->
-                                            <div class="col-8">
-                                                <div class="row"><img src="#" class="drink-info-image"></div>
-                                                <div class="row instructions-div"></div>
+                                            <div class="card col-12">    
+                                            <h5 class="card-header">Ingredients</h5>
+                                                <div class="card-body">
+                                                    <div class="card ingredient-list"></div>
+                                                </div>
                                             </div>
-                                            <!-- Column for ingredients and activities -->
-                                            <div class="col-4">
-                                                <div class="row">
-                                                    <div class="card col-12">    
-                                                    <h5 class="card-header">Ingredients</h5>
-                                                        <div class="card-body">
-                                                            <div class="card ingredient-list"></div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <br>
-                                                <div class="row">
-                                                    <div class="card col-12">
-                                                    <h5 class="card-header">Actions</h5>
-                                                        <div class="card-body">
-                                                            <button class="return btn btn-ctf">Return</button>
-                                                            <button class="favorite btn btn-ctf"><i class="favorite-icon far fa-heart"></i></button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                             </div>
+                                        </div>
+                                        <br>
                                         <div class="row">
-                                           
+                                            <div class="card col-12">
+                                            <h5 class="card-header">Actions</h5>
+                                                <div class="card-body">
+                                                    <button class="return btn btn-ctf">Return</button>
+                                                    <button class="favorite btn btn-ctf"><i class="favorite-icon far fa-heart"></i></button>
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
-                                </main>
-                            </div>
+                                </div>
+                            </main>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
 
     </section>
         <!-- First row: Contains the buttons for the catalog sections -->
