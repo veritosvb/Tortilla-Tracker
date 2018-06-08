@@ -7,11 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta property="og:url"           content="https://www.your-domain.com/your-page.html" />
+    <meta property="og:url"           content="https://veritosvb.github.io/Tortilla-Tracker/" />
     <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="Your Website Title" />
-    <meta property="og:description"   content="Your description" />
-    <meta property="og:image"         content="https://www.your-domain.com/path/image.jpg" />
+    <meta property="og:title"         content="Peace ❤ Drink" />
+    <meta property="og:description"   content="Proyect 1 for Bootcamp" />
 
     <title>Peace ❤ Drinks</title>
 
@@ -36,6 +35,15 @@
   </head>
 
   <body id="page-top">
+
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0';
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
 
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
@@ -97,40 +105,41 @@
     </header>
     <!-- End header section -->
 
-        <!-- Sign In Section -->
-        <section id="signInSection" class="content-section text-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <h2>Sign In</h2>
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleInputEmail1">Email address</label>
-                                <input type="email" class="form-control" id="emailSI" aria-describedby="emailHelp" required>
-                                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="exampleInputPassword1">Password</label>
-                                <input type="password" id="passwordSI"class="form-control" required>
-                            </div>
-                            <div class="form-check">
-                                <a href="#" class="form-check-label" id="forgotPassword">Forgot your password?</a>
-                            </div>
-                            <div>
-                            <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>   
-                <div class="row">   
-                    <div class="col-lg-8 mx-auto p-5">
-                            <a href="#" data-toggle="modal" data-target="#RegistrationModal">Not a member? Register Now!  </a> 
-                    </div> 
+    <!-- Sign In Section -->
+    <section id="signInSection" class="content-section text-center">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <h2>Sign In</h2>
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="emailSI" aria-describedby="emailHelp" required>
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" id="passwordSI"class="form-control" required>
+                        </div>
+                        <div class="form-check">
+                            <a href="#" class="form-check-label" id="forgotPassword">Forgot your password?</a>
+                        </div>
+                        <div>
+                        <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
+                        </div>
+                    </form>
                 </div>
+            </div>   
+            <div class="row">   
+                <div class="col-lg-8 mx-auto p-5">
+                        <a href="#" data-toggle="modal" data-target="#RegistrationModal">Not a member? Register Now!  </a> 
+                </div> 
             </div>
-        </section>
-       <!--End of  Sign In Section -->
+        </div>
+    </section>
+    <!--End of  Sign In Section -->
 
+     <!-- Start of catalog -->
     <section id="fixadrink" class="content-section text-center ">
         <div class="container">
             <div class="row">
@@ -146,7 +155,7 @@
                                 <div class="collapse navbar-collapse" id="navbarResponsive2">
                                     <ul class="navbar-nav ml-auto navbar-light2">
                                         <li class="nav-item">
-                                            <a id="navSignIn" class="nav-link navbar-light2" >Tequila</a>
+                                            <a class="nav-link navbar-light2" >Tequila</a>
                                         </li>
                                         <li class="nav-item">
                                             <a class="nav-link " >Whisky</a> 
@@ -154,6 +163,10 @@
                                         <li class="nav-item">
                                             <a class="nav-link " >Wine</a>
                                         </li>
+                                        <li class="nav-item">
+                                             <div class="fb-share-button" data-href="https://veritosvb.github.io/Tortilla-Tracker/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="nav-link " target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fveritosvb.github.io%2FTortilla-Tracker%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                                        </li>
+
                                     </ul>
                                 </div>
                             </div>
@@ -165,20 +178,33 @@
                                     <div class="drink-information container">
                                         <div class="row">
                                             <!-- Column for image and recipe -->
-                                            <div class="col">
+                                            <div class="col-8">
                                                 <div class="row"><img src="#" class="drink-info-image"></div>
                                                 <div class="row instructions-div"></div>
                                             </div>
                                             <!-- Column for ingredients and activities -->
-                                            <div class="col"></div>
-                                                <div class="row ingredient-list"></div>
-                                                <div class="row"></div>
-                                        </div>
+                                            <div class="col-4">
+                                                <div class="row">
+                                                    <div class="card col-12">    
+                                                    <h5 class="card-header">Ingredients</h5>
+                                                        <div class="card-body">
+                                                            <div class="card ingredient-list"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <br>
+                                                <div class="row">
+                                                    <div class="card col-12">
+                                                    <h5 class="card-header">Actions</h5>
+                                                        <div class="card-body">
+                                                            <button class="return btn btn-ctf">Return</button>
+                                                            <button class="favorite btn btn-ctf"><i class="favorite-icon far fa-heart"></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                             </div>
                                         <div class="row">
-                                            <div class="col">
-                                                <button class="return btn">Return</button>
-                                                <button class="favorite btn"><i class="favorite-icon far fa-heart"></i></button>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </main>
@@ -191,6 +217,7 @@
     </section>
         <!-- First row: Contains the buttons for the catalog sections -->
 
+     
 
            <!-- Contact Section -->
     

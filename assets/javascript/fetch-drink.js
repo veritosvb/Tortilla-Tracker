@@ -15,7 +15,7 @@ $(document).ready(function() {
 
         if(liquor == "Pick something to drink!")
         {
-            alert("No liquor selection made - Default tequila");
+            modalAlert("No liquor selection made - Default tequila");
             liquor = "Tequila";
         }
     

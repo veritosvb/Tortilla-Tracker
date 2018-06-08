@@ -205,3 +205,4 @@ function modalAlert(message){
     $("#error").attr("data-toggle", "modal");
     $("#error").modal('show');
 }
+
