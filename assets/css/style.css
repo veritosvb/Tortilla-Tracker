@@ -340,4 +340,7 @@ body {
   .drink-info-image{
     width: 400px;
     height: 470px;
+    position: relative;
+    top: 50%;
+    left: 20%;
   }
