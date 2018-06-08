@@ -82,6 +82,9 @@ body {
     font-weight: 700;
   }
   
+  .navbar-light2{
+    color:black;
+  }
   #mainNav a {
     color: white;
   }
@@ -318,6 +321,14 @@ body {
     padding-top: 70px;
   }
 
+  #fixadrink{
+    background: url("../images/background3.jpg") no-repeat center center scroll;
+   
+  }
 
-  
-  
+   .transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
