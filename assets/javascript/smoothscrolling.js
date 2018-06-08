@@ -1,6 +1,3 @@
-$.get("/navbar.html", function(data){
-  $("#nav-placeholder").replaceWith(data);
-});
 
 (function($) {
     "use strict"; // Start of use strict
