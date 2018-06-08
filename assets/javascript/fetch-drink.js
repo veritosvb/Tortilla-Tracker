@@ -1,7 +1,8 @@
 // global variables
 var liquor = "";
 var drinkObjectArr =[];
-var favoritesArr = []
+var favoritesArr = [];
+var ingredientArray=[""];
 
 
 $(document).ready(function() {
@@ -115,6 +116,9 @@ $(document).ready(function() {
                     //Gets the measure and the ingredient and concatenates them, then adds them to the list element
                     newli.text(drink[measure] + ": "+drink[ingredient]);
                     ingredientList.append(newli);
+
+                    //array that stores the ingredients list
+                    ingredientArray[i]=drink[ingredient];
                 }
             }
             //Gets the instructions and appends it to the corresponding div
@@ -126,6 +130,10 @@ $(document).ready(function() {
             console.log(ingredientList);
             //Appends the list to the ingredients div
             ingredientsDiv.append(ingredientList);
+
+            console.log(ingredientArray);
+            ingredients(ingredientArray);
+            
             
             $('.drink-information').show();
         });
@@ -169,5 +177,67 @@ function updateFavorites(id, source){
         let favoriteImageDiv = $("<div>");
         let favoriteImageImg = $("<img>");
     }
+
+}
+
+function ingredients(ingArray){
+
+key = "vqe373k5m24yguknhm2mqb6z";
+
+for (i=1; i<ingArray.length;i++){
+
+console.log("original array: " +
+ingArray[i]);
+
+
+var queryURL =
+"http://api.walmartlabs.com/v1/search?query=" +
+ingArray[i] +"&format=json&apiKey=" +
+key;
+
+console.log(queryURL);
+
+$.ajax({
+
+url: queryURL,
+
+method: "GET"
+
+})
+
+.done(function(response){
+
+console.log(queryURL);
+
+console.log(response);
+
+console.log(response.items["0"].name);
+
+console.log(response.items["0"].salePrice);
+
+
+var itemName =
+response.items["0"].name;
+
+var itemPrice =
+response.items["0"].salePrice;
+
+
+console.log("name: " +
+itemName + " USD");
+
+console.log("price: "+
+itemPrice + " USD");
+
+
+$(".walmart-list").append(itemName);
+
+
+$(".walmart-list").append(itemPrice);
+
+
+});
+
+}
 
 }
