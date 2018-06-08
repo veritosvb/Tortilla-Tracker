@@ -93,9 +93,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     name = user.displayName;
     email = user.email;
     uid = user.displayName;  
+    console.log(uid);
     $("#navSignIn").text("Sign out");
-    $("#uid").text(uid);
-    modalAlert("User sign In");
+    $("#uid").append('<i class="fas fa-user"></i>');
+    $("#emailSI").text("");
+    $("#passwordSI").text("");
+    modalAlert("Welcome to our page!! Happy drinks");
   }
   else{
       //user not signed in

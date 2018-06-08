@@ -42,6 +42,10 @@ body {
      font-size: 17px;
      }
 
+.drink-information {
+  display: none;
+}
+
   
   @media (min-width: 768px) {
     p {
@@ -82,6 +86,9 @@ body {
     font-weight: 700;
   }
   
+  .navbar-light2{
+    color:black;
+  }
   #mainNav a {
     color: white;
   }
@@ -318,6 +325,15 @@ body {
     padding-top: 70px;
   }
 
+  #fixadrink{
+    background: url("../images/background3.jpg") no-repeat center center scroll;
+    color:  rgb(241, 46, 183);
+   
+  }
 
-  
-  
+   .transbox {
+    margin: 30px;
+    background-color: #ffffff;
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier */
+  }
