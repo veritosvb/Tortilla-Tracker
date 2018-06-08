@@ -145,6 +145,7 @@ $(document).ready(function() {
         $('.instructions-div').empty();
         $('.ingredient-list').empty();
         $('.drink-images').show();
+        $('.walmart-list').empty();
     });
 
     $('.favorite.btn').click(function(){
@@ -180,64 +181,37 @@ function updateFavorites(id, source){
 
 }
 
+
+//function that fetches ingrediets cost information from walmart api 
+
 function ingredients(ingArray){
+    key = "vqe373k5m24yguknhm2mqb6z";
+    for (i=1; i<ingArray.length;i++){
+    console.log(ingArray[i]);
+    var queryURL = "http://api.walmartlabs.com/v1/search?query=" + ingArray[i] +"&format=json&apiKey=" + key;
+    console.log(queryURL);
 
-key = "vqe373k5m24yguknhm2mqb6z";
+    $.ajax({
+    url: queryURL,
+    method: "GET"
+    })
 
-for (i=1; i<ingArray.length;i++){
+    .done(function(response){
+    console.log(queryURL);
+    console.log(response);
+    console.log(response.items["0"].name);
+    console.log(response.items["0"].salePrice);
+    var itemName = response.items["0"].name;
+    var itemPrice = response.items["0"].salePrice;
+    console.log("name: " + itemName + " USD");
+    console.log("price: "+ itemPrice + " USD");
+    $(".walmart-list").append(itemName);
+    $(".walmart-list").append(itemPrice);
 
-console.log("original array: " +
-ingArray[i]);
+    
 
+    });
 
-var queryURL =
-"http://api.walmartlabs.com/v1/search?query=" +
-ingArray[i] +"&format=json&apiKey=" +
-key;
+    }
 
-console.log(queryURL);
-
-$.ajax({
-
-url: queryURL,
-
-method: "GET"
-
-})
-
-.done(function(response){
-
-console.log(queryURL);
-
-console.log(response);
-
-console.log(response.items["0"].name);
-
-console.log(response.items["0"].salePrice);
-
-
-var itemName =
-response.items["0"].name;
-
-var itemPrice =
-response.items["0"].salePrice;
-
-
-console.log("name: " +
-itemName + " USD");
-
-console.log("price: "+
-itemPrice + " USD");
-
-
-$(".walmart-list").append(itemName);
-
-
-$(".walmart-list").append(itemPrice);
-
-
-});
-
-}
-
-}
+    }
