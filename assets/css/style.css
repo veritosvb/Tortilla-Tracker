@@ -42,6 +42,10 @@ body {
      font-size: 17px;
      }
 
+.drink-information {
+  display: none;
+}
+
   
   @media (min-width: 768px) {
     p {

@@ -1,6 +1,7 @@
 // global variables
 var liquor = "";
 var drinkObjectArr =[];
+var favoritesArr = []
 
 
 $(document).ready(function() {
@@ -77,9 +78,10 @@ $(document).ready(function() {
 
         console.log($(event.target).attr("drink-id"));
         //Saves the id of the clicked item on a variable
-        let id = $(event.target).attr("drink-id")
-        let imageSelected = $(event.target).attr("src")
-        
+        let id = $(event.target).attr("drink-id");
+        $('.favorite.btn').attr("id",id);
+        //Saves the img
+
         //Saves the query to a variable
         var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i="+id; ;
         //Calling the ajax for the drink ID
@@ -89,29 +91,15 @@ $(document).ready(function() {
         })
         .done(function(response) {
             //empties the div where the images are stored
-            $('.drink-images').empty();
+            $('.drink-images').hide();
             console.log(queryURL);
             console.log(response);
             //Saves the relevant data from the pull to a variable
             let drink = response.drinks[0];
             console.log(drink);
-            //Adds the container class to structure the div
-            $('.drink-images').addClass("container");
-            //Creates the first row's bootstrap structure
-            let newRow1 = $("<div class='row'>");
-            let newCol1 = $("<div class='col'>");
-            let newCol2 = $("<div class='col'>");
-            newRow1.append(newCol1);
-            newRow1.append(newCol2);
-            
-            //Creates the second row's bootstrap structure
-            let newRow2 = $("<div class='row'>");
-            let newCol3 = $("<div class='col'>");
-            newRow2.append(newCol3);
-            
+
             //Creates the div where the ingredients list will be saved
-            let ingredientsDiv = $("<div>");
-            newCol1.append(ingredientsDiv);
+            let ingredientsDiv = $(".ingredient-list");
             //Creates the list where the ingredients will be saved
             let ingredientList = $("<ul>");
             //Goes through all the ingredients
@@ -127,16 +115,59 @@ $(document).ready(function() {
                     //Gets the measure and the ingredient and concatenates them, then adds them to the list element
                     newli.text(drink[measure] + ": "+drink[ingredient]);
                     ingredientList.append(newli);
-                    //Gets the instructions and appends it to the corresponding div
-                    $(newCol3).append(drink["strInstructions"]);
                 }
             }
+            //Gets the instructions and appends it to the corresponding div
+            $('.instructions-div').append(drink["strInstructions"]);
+            //Adds image
+            $('.drink-info-image').attr("src", drink["strDrinkThumb"]);
+            //Saves image link in the favorite button as an attribute
+            $('.favorite.btn').attr("source", drink["strDrinkThumb"]);
             console.log(ingredientList);
             //Appends the list to the ingredients div
             ingredientsDiv.append(ingredientList);
-            //Appends the rows to the containers
-            $('.drink-images').append(newRow1);
-            $('.drink-images').append(newRow2);
+            
+            $('.drink-information').show();
         });
     });
-});
+
+    $('.return').click(function(){
+        $('.drink-information').hide();
+        $('.drink-info-image').empty();
+        $('.instructions-div').empty();
+        $('.ingredient-list').empty();
+        $('.drink-images').show();
+    });
+
+    $('.favorite.btn').click(function(){
+        let exists = 0;
+        let id = $(event.target).attr("id");
+        let source = $(event.target).attr("source");
+        for(let i = 0; i < favoritesArr.length;i++){
+            if(favoritesArr[i] === id){
+                exists = 1;
+                $('.favorite-icon').removeClass("fas");
+                $('.favorite-icon').addClass("far");
+                favoritesArr.splice(i, 1);
+            }
+        }
+        if(exists === 0){
+            $('.favorite-icon').removeClass("far");
+            $('.favorite-icon').addClass("fas");
+            favoritesArr.push(id, source);
+        }
+        console.log("favorites");
+        console.log(favoritesArr);
+        
+        
+    });
+}); 
+
+function updateFavorites(id, source){
+    $('.favorite-images').empty();
+    for(let i = 0; i < favoritesArr; i++){
+        let favoriteImageDiv = $("<div>");
+        let favoriteImageImg = $("<img>");
+    }
+
+}

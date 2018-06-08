@@ -93,7 +93,8 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-8 mx-auto">
-                            <h2 id="drink-name">Log In to save your favorites</h2>
+                            <h2 id="drink-name">Log In to save your favorites!</h2>
+                            <div class="favorite-images"></div>
                         </div>
                     </div>
                 </div>
@@ -165,13 +166,29 @@
                                                 </div>
 
                                             </nav>
-                                    
+                                    <!-- Div where the fetched drink data is inserted -->
                                     <div class="row drink-images">
-
-                                         
                                     </div>
-
-
+                                    <!-- Div that displays the information for a drink -->
+                                    <div class="drink-information container">
+                                        <div class="row">
+                                            <!-- Column for image and recipe -->
+                                            <div class="col">
+                                                <div class="row"><img src="#" class="drink-info-image"></div>
+                                                <div class="row instructions-div"></div>
+                                            </div>
+                                            <!-- Column for ingredients and activities -->
+                                            <div class="col"></div>
+                                                <div class="row ingredient-list"></div>
+                                                <div class="row"></div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <button class="return btn">Return</button>
+                                                <button class="favorite btn"><i class="favorite-icon far fa-heart"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </main>
                             </div>
                         </div>
