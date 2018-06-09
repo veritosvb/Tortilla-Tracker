@@ -93,12 +93,9 @@ firebase.auth().onAuthStateChanged(function(user) {
     name = user.displayName;
     email = user.email;
     uid = user.displayName;  
-    console.log(uid);
     $("#navSignIn").text("Sign out");
-    $("#uid").append('<i class="fas fa-user"></i>');
-    $("#emailSI").text("");
-    $("#passwordSI").text("");
-    modalAlert("Welcome to our page!! Happy drinks");
+    $("#uid").text(uid);
+    modalAlert("User sign In");
   }
   else{
       //user not signed in
@@ -114,18 +111,13 @@ $("#signIn").click(function(event){
     signIn();
 });
 
-$("#forgotPassword").click(function(event){
+//Function to recover password
+$("#forgotPassBtn").click(function(event){
     console.log("forgot password");
+    
+
 
 });
-
-$("#forgotPassword").click(function(event){
-    console.log("forgot password");
-
-});
-
-
-var userAccountMessage = "Account created successfully";
 
 //To clear content of fields if user clicks on Cancel button
 $("#cancel").on("click", function(){
@@ -134,6 +126,7 @@ $("#cancel").on("click", function(){
     $("#inputEmail").val("");
     $("#inputPassword").val("");
     $("#inputPassword2").val("");
+    $("#inputEmailFP").val(""); //From recover password section
 });
 
 //Validation if user does not enter the same password at user registration
