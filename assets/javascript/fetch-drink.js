@@ -9,6 +9,16 @@ $(document).ready(function() {
 
     $(".call-drink").click(function(event) {
         event.preventDefault();
+        $('.drink-information').hide();
+        $('.drink-info-image').empty();
+        $('.instructions-div').empty();
+        $('.ingredient-list').empty();
+        $('.drink-images').show();
+        $('.favorite.btn').attr("id","");
+        $('.favorite-icon').removeClass("fas");
+        $('.favorite-icon').addClass("far");
+        $('.walmart-list').empty();
+
         console.log("what is this");
         
 
@@ -254,17 +264,41 @@ $(document).ready(function() {
 
 function updateFavorites(){
     console.log("favorite images");
+    $('.carousel-indicators').empty();
+    $('.carousel-inner').empty();
     
-    $('.favorite-images').empty();
-    let favoriteImageDiv = $("<div>");
+    //$('.favorite-images').empty();
     for(let i = 0; i < favoritesArr.length; i++){
+        //Creating divs for the carousel
+        let favoriteImageDiv = $("<div>");
+        //Adding classes for the carousel
+        favoriteImageDiv.addClass("carousel-item");
+        //favoriteImageDiv.addClass("text-center");
+        if(i===0){
+            favoriteImageDiv.addClass("active");
+        }
+        //Creating li item
+        let newLi = $("<li>");
+        //Adding classes to li item
+        newLi.attr("data-target","");
+        newLi.attr("data-slide-to",i);
+        //Apending li
+        $('.carousel-indicators').append(newLi);
+        //Creating the image for the drink
         let favoriteImageImg = $("<img>");
         //let favoriteImageName = $("<p>");
+        //Adding classes to the images and div
         favoriteImageImg.addClass("drink-image");
         favoriteImageImg.addClass("drink-element");
+        favoriteImageImg.addClass("d-block");
+        favoriteImageImg.addClass("w-100");
         favoriteImageImg.attr("src",favoritesArr[i].source);
+        favoriteImageImg.attr("drink-id",favoritesArr[i].id);
+        //Appending image to carousel item div
         favoriteImageDiv.append(favoriteImageImg);
-        $('.favorite-images').append(favoriteImageDiv);
+        //Adding carousel item to carousel inner
+        $('.carousel-inner').append(favoriteImageDiv);
+        //$('.favorite-images').append(favoriteImageDiv);
     }
 
 }
