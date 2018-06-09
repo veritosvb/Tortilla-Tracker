@@ -114,9 +114,25 @@ $("#signIn").click(function(event){
 //Function to recover password
 $("#forgotPassBtn").click(function(event){
     console.log("forgot password");
-    
+    //Validation if field is empty
+    if ($("#inputEmailFP").val()=="") {
+        modalAlert("Please provide an email address");
+    }
+    else {
+        firebase.auth().sendPasswordResetEmail($("#inputEmailFP").val().trim()).then(function(confirmationResult) {
+            modalAlert("Reset password link sent!");
+            $("#forgotPasswordModal").modal("hide");
+            $("#inputEmailFP").val("");
+          })
+        .catch(function(error) {
+            modalAlert(error.message);
+        });
+    }
+});
 
-
+//To clear content of field if users clicks on Cancel Button from Forgot Password Section
+$("#cancelFP").on("click", function(){
+    $("#inputEmailFP").val(""); //From recover password section
 });
 
 //To clear content of fields if user clicks on Cancel button
@@ -126,7 +142,7 @@ $("#cancel").on("click", function(){
     $("#inputEmail").val("");
     $("#inputPassword").val("");
     $("#inputPassword2").val("");
-    $("#inputEmailFP").val(""); //From recover password section
+    
 });
 
 //Validation if user does not enter the same password at user registration
