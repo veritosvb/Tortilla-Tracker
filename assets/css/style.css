@@ -194,6 +194,14 @@ body {
     .masthead .intro-body .intro-text {
       font-size: 22px;
     }
+
+    .drink-info-image{
+      width: 400px;
+      height: 470px;
+      position: relative;
+      top: 50%;
+      left: 5%;
+    }
   }
   
   

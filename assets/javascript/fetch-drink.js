@@ -4,146 +4,88 @@ var drinkObjectArr =[];
 var favoritesArr = [];
 var ingredientArray=[""];
 
+function setLiquor(l){
+    liqour = l;
+    var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + liquor ;
+        
+    $.ajax({
+        url: queryURL,
+        method: "GET"
+    })
+    .done(function(response) {
+        $('.drink-images').empty();
+        //Saves the drinks matrix on a new variable to go down one level
+        let drinkArr = response.drinks;
+        console.log(drinkArr);
+        //Variable where the objects will be stored
+        drinkObjectArr = [];
+        //Goes through the array and creates an object for every drink pulled from the API
+        for(let i = 0; i<drinkArr.length;i++){
+            let bebida = {
+                //drink id
+                id: drinkArr[i].idDrink,
+                //drink name
+                name: drinkArr[i].strDrink,
+                //drink img source
+                image: drinkArr[i].strDrinkThumb
+            }
+            //pushed the object to the object array
+            drinkObjectArr.push(bebida);
+        }
+        
+        //Goes through the object array and looks for the name and image, then appends them to a div
+        for(let j=0; j<drinkArr.length;j++){
+            //Let created inside the for so the append is not overwritten
+            let drinkDiv = $('<div class="col-lg-3 col-md-4 col-sm-5 col-xm-6">');
+            let drinkName = $("<p>");
+            let drinkImg = $("<img>");
+            //Adding attribute and class to the image
+            drinkImg.attr("src",drinkObjectArr[j].image);
+            drinkImg.addClass("drink-image");
+            drinkImg.addClass("drink-element");
+            drinkImg.attr("drink-id", drinkObjectArr[j].id);
+            //Adding attribute and class to the name
+            drinkName.text(drinkObjectArr[j].name);
+            drinkName.addClass("drink-name");
+            drinkName.addClass("drink-element");
+            drinkName.attr("drink-id", drinkObjectArr[j].id);
+            //Appends to the div
+            drinkDiv.append(drinkImg);
+            drinkDiv.append(drinkName);
+            $(".drink-images").append(drinkDiv);
+
+
+            
+        }
+    });
+}
 
 $(document).ready(function() {
 
     $(".call-drink").click(function(event) {
         event.preventDefault();
-        $('.drink-information').hide();
-        $('.drink-info-image').empty();
-        $('.instructions-div').empty();
-        $('.ingredient-list').empty();
-        $('.drink-images').show();
-        $('.favorite.btn').attr("id","");
-        $('.favorite-icon').removeClass("fas");
-        $('.favorite-icon').addClass("far");
-        $('.walmart-list').empty();
-
-        console.log("what is this");
-        
-
         liquor = $('#drink-option').find(":selected").text();
 
         if(liquor == "Pick something to drink!")
         {
             modalAlert("No liquor selection made - Default tequila");
             liquor = "Tequila";
+        }else{
+            setLiquor(liquor);
         }
     
-        console.log(liquor);   
-
-        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + liquor ;
-        
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-        .done(function(response) {
-            $('.drink-images').empty();
-            //Saves the drinks matrix on a new variable to go down one level
-            let drinkArr = response.drinks;
-            console.log(drinkArr);
-            //Variable where the objects will be stored
-            drinkObjectArr = [];
-            //Goes through the array and creates an object for every drink pulled from the API
-            for(let i = 0; i<drinkArr.length;i++){
-                let bebida = {
-                    //drink id
-                    id: drinkArr[i].idDrink,
-                    //drink name
-                    name: drinkArr[i].strDrink,
-                    //drink img source
-                    image: drinkArr[i].strDrinkThumb
-                }
-                //pushed the object to the object array
-                drinkObjectArr.push(bebida);
-            }
-            
-            //Goes through the object array and looks for the name and image, then appends them to a div
-            for(let j=0; j<drinkArr.length;j++){
-                //Let created inside the for so the append is not overwritten
-                let drinkDiv = $('<div class="col-lg-3 col-md-4 col-sm-5 col-xm-6">');
-                let drinkName = $("<p>");
-                let drinkImg = $("<img>");
-                //Adding attribute and class to the image
-                drinkImg.attr("src",drinkObjectArr[j].image);
-                drinkImg.addClass("drink-image");
-                drinkImg.addClass("drink-element");
-                drinkImg.attr("drink-id", drinkObjectArr[j].id);
-                //Adding attribute and class to the name
-                drinkName.text(drinkObjectArr[j].name);
-                drinkName.addClass("drink-name");
-                drinkName.addClass("drink-element");
-                drinkName.attr("drink-id", drinkObjectArr[j].id);
-                //Appends to the div
-                drinkDiv.append(drinkImg);
-                drinkDiv.append(drinkName);
-                $(".drink-images").append(drinkDiv);
-
-            }
-        });
     });
 
     $('.call-drink2').click(function(event){
         var liquor = $('#s').val().trim();
 
-        if(liquor == "Search for")
+
+        if(liquor == "Search for" || liquor == "")
         {
             return;
         }
+        setLiquor(liquor);
     
-        console.log(liquor);   
-
-        var queryURL = "https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=" + liquor ;
-        
-        $.ajax({
-            url: queryURL,
-            method: "GET"
-        })
-        .done(function(response) {
-            $('.drink-images').empty();
-            //Saves the drinks matrix on a new variable to go down one level
-            let drinkArr = response.drinks;
-            console.log(drinkArr);
-            //Variable where the objects will be stored
-            drinkObjectArr = [];
-            //Goes through the array and creates an object for every drink pulled from the API
-            for(let i = 0; i<drinkArr.length;i++){
-                let bebida = {
-                    //drink id
-                    id: drinkArr[i].idDrink,
-                    //drink name
-                    name: drinkArr[i].strDrink,
-                    //drink img source
-                    image: drinkArr[i].strDrinkThumb
-                }
-                //pushed the object to the object array
-                drinkObjectArr.push(bebida);
-            }
-            
-            //Goes through the object array and looks for the name and image, then appends them to a div
-            for(let j=0; j<drinkArr.length;j++){
-                //Let created inside the for so the append is not overwritten
-                let drinkDiv = $('<div class="col-lg-3 col-md-4 col-sm-5 col-xm-6">');
-                let drinkName = $("<p>");
-                let drinkImg = $("<img>");
-                //Adding attribute and class to the image
-                drinkImg.attr("src",drinkObjectArr[j].image);
-                drinkImg.addClass("drink-image");
-                drinkImg.addClass("drink-element");
-                drinkImg.attr("drink-id", drinkObjectArr[j].id);
-                //Adding attribute and class to the name
-                drinkName.text(drinkObjectArr[j].name);
-                drinkName.addClass("drink-name");
-                drinkName.addClass("drink-element");
-                drinkName.attr("drink-id", drinkObjectArr[j].id);
-                //Appends to the div
-                drinkDiv.append(drinkImg);
-                drinkDiv.append(drinkName);
-                $(".drink-images").append(drinkDiv);
-
-            }
-        });
     });
 
     //Listens for a drink element press
@@ -307,6 +249,7 @@ function updateFavorites(){
 //function that fetches ingrediets cost information from walmart api 
 
 function ingredients(ingArray){
+    $('.walmart-list').empty();
     key = "vqe373k5m24yguknhm2mqb6z";
     for (i=1; i<ingArray.length;i++){
     console.log(ingArray[i]);
