@@ -189,26 +189,6 @@ body {
     font-size: 18px;
   }
   
-  @media (min-width: 768px) {
-    .masthead {
-      height: 100%;
-      padding: 0;
-    }
-    .masthead .intro-body .brand-heading {
-      font-size: 100px;
-    }
-    .masthead .intro-body .intro-text {
-      font-size: 22px;
-    }
-
-    .drink-info-image{
-      width: 400px;
-      height: 470px;
-      position: relative;
-      top: 50%;
-      left: 5%;
-    }
-  }
   
   @media (min-width: 768px) {
     .masthead {
@@ -230,7 +210,17 @@ body {
       left: 5%;
     }
   }
-  
+  @media (min-width: 680px) {
+
+    .drink-info-image{
+      margin: auto;
+      width: 400px;
+      height: 470px;
+      left: 0px;
+      padding: 0px;
+     
+    }
+  }
   @media (min-width: 992px) {
     .content-section {
       padding-top: 200px;
@@ -246,6 +236,10 @@ body {
     text-transform: uppercase;
 
     border-radius: 50px;
+  }
+
+  .div-ingredients{
+    padding-top:10px;
   }
 
   .btn-signIn {
@@ -390,11 +384,11 @@ body {
   }
 
   .drink-info-image{
+    margin: auto;
     width: 400px;
     height: 470px;
     position: relative;
-    top: 50%;
-    left: 20%;
+ 
   }
 
 
