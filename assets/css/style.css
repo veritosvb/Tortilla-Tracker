@@ -240,6 +240,7 @@ body {
 
   .div-ingredients{
     padding-top:10px;
+    padding-bottom:20px;
   }
 
   .btn-signIn {
@@ -367,6 +368,7 @@ body {
 /* contact form css */
   #contact{
     padding-top: 70px;
+    
   }
 
   #fixadrink{
