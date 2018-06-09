@@ -16,6 +16,10 @@ function setLiquor(l){
         $('.drink-images').empty();
         //Saves the drinks matrix on a new variable to go down one level
         let drinkArr = response.drinks;
+        if(drinkArr == undefined){
+            modalAlert("No drink found in catalog");
+            return;
+        }
         console.log(drinkArr);
         //Variable where the objects will be stored
         drinkObjectArr = [];
@@ -77,7 +81,9 @@ $(document).ready(function() {
     });
 
     $('.call-drink2').click(function(event){
-        var liquor = $('#s').val().trim();
+        event.preventDefault();
+
+         liquor = $('#s').val().trim();
 
 
         if(liquor == "Search for" || liquor == "")
@@ -281,5 +287,9 @@ function ingredients(ingArray){
     });
 
     }
+
+    }
+
+    function saveFavoritesToDB(){
 
     }

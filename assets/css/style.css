@@ -64,12 +64,17 @@ body {
     -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
-    color: #42DCA3;
+    color: rgb(46, 228, 241);
   }
   
   a:focus, a:hover {
     text-decoration: none;
-    color: #1d9b6c;
+    color:rgb(250, 40, 222);
+  }
+
+  i:focus, i:hover {
+    text-decoration: none;
+    color:rgb(250, 40, 222);
   }
   
   #mainNav {
@@ -125,10 +130,10 @@ body {
     background-color: transparent;
   }
   
-  .navbar-catalog{
-    background-color:  rgb(122, 114, 231);
-    color:black;
-  }
+.drink-name{
+  background-color:white;
+  color:black;
+}
 
   @media (min-width: 992px) {
     #mainNav {
@@ -252,6 +257,13 @@ body {
     border-radius: 50px;
   }
 
+  .btn-signIn:focus, .btn-signIn:hover {
+    color: black;
+    border: 1px solid rgb(250, 40, 222);
+    outline: none;
+    background-color: rgb(250, 40, 222);
+    border-radius: 50px;
+  }
 
   .btn-ctf {
   
@@ -262,14 +274,28 @@ body {
     border-radius: 50px;
   }
 
+  .btn-ctf:focus, .btn-ctf:hover {
+    color: black;
+    border: 1px solid rgb(250, 40, 222);
+    outline: none;
+    background-color: rgb(250, 40, 222);
+    border-radius: 50px;
+  }
 
   .btn-signUp {
-    background-color: greenyellow;
+    background-color: rgb(46, 228, 241);
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
     border-radius: 50px;
 
+  }
+  .btn-signUp:focus, .btn-signUp:hover {
+    color: black;
+    border: 1px solid rgb(250, 40, 222);
+    outline: none;
+    background-color: rgb(250, 40, 222);
+    border-radius: 50px;
   }
 
   .btn-cancel {
@@ -280,19 +306,27 @@ body {
     border-radius: 50px;
 
   }
+
+  .btn-cancel:focus, .btn-cancel:hover {
+    color: black;
+    border: 1px solid rgb(250, 40, 222);
+    outline: none;
+    background-color: rgb(250, 40, 222);
+    border-radius: 50px;
+  }
   
   .btn-default {
-    color: #42DCA3;
-    border: 1px solid #42DCA3;
+    color: rgb(46, 228, 241);
+    border: 1px solidrgb(46, 228, 241);
     background-color: transparent;
     border-radius: 50px;
   }
   
   .btn-default:focus, .btn-default:hover {
     color: black;
-    border: 1px solid #42DCA3;
+    border: 1px solid rgb(250, 40, 222);
     outline: none;
-    background-color: #42DCA3;
+    background-color: rgb(250, 40, 222);
     border-radius: 50px;
   }
 
@@ -315,7 +349,6 @@ body {
   }
   
   footer span.copyright {
-    font-family: 'Lora', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-size: 90%;
     line-height: 40px;
     text-transform: none;
@@ -346,7 +379,7 @@ body {
     color: black;
     border-radius: 100%;
     outline: none;
-    background-color: gray;
+    background-color:rgb(46, 228, 241);
   }
 
   .social-buttons2{
@@ -358,14 +391,14 @@ body {
     color: black;
     border-radius: 100%;
     outline: none;
-    background-color:#42DCA3;
+    background-color:rgb(46, 228, 241);
   }
   
   ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
-    background-color: #42DCA3;
+    background-color: rgb(250, 40, 222);;
   }
   
-/* contact form css */
+
   #contact{
     padding-top: 70px;
     
@@ -373,7 +406,7 @@ body {
 
   #fixadrink{
     background: url("../images/background3.jpg") no-repeat center center scroll;
-    color:  #42DCA3;
+    color: rgb(46, 228, 241);
    
   }
 
