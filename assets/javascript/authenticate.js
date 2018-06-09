@@ -49,7 +49,7 @@ function clearRegistration(){
 }
 
 function checkRegistrationModal(name,email,cp,pass){
-    if (name != "" ||  email != "" || cp != "" || pass!= "") {
+    if (name != "" &&  email != "" && cp != "" && pass!= "") {
         if (pass == ($("#inputPassword2").val())) {
             return true;
         }else{

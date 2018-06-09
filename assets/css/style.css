@@ -128,7 +128,7 @@ body {
   #mainNav .navbar-nav .nav-item:active, #mainNav .navbar-nav .nav-item:focus {
     outline: none;
     background-color: transparent;
-    paddinng:1px;
+    padding:1px;
   }
   
 .drink-name{
