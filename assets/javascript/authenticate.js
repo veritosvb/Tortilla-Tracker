@@ -30,7 +30,6 @@ function submitCreateAccount(displayName,email,cp,password){
                 modalAlert("Account registered successfully!");   
             }).catch(function(error) {
                 modalAlert(error.message);   
-
             });
 
         }).catch(function(error) {
@@ -64,12 +63,19 @@ function checkRegistrationModal(name,email,cp,pass){
 }
 
 //signout account
-firebase.auth().signOut().then(function() {
-    // Sign-out successful.
-  }).catch(function(error) {
-    // An error happened.
-  });
-
+function signOut(){
+    $("#navSignIn").text("Sign In");
+    $("#navSignIn").attr("newName", "out");
+    $("#signInSection").css({display:"block"});
+    firebase.auth().signOut().then(function() {
+        // Sign-out successful.
+        
+        modalAlert("You have successfully signed out");
+      }).catch(function(error) {
+        // An error happened.
+        modalAlert(error.message);
+      });
+}
 
 //sign in account
 function signIn(){
@@ -77,10 +83,19 @@ function signIn(){
     var password = $("#passwordSI").val().trim();
 
     if(email == "" || password == ""){
-        modalAlert("Please fill Email address and password");
+        modalAlert("Please enter email address and password");
     }else{
 
-        firebase.auth().signInWithEmailAndPassword(email, password).catch(function(error) {
+        firebase.auth().signInWithEmailAndPassword(email, password).then(function(confirmationResult) {
+            modalAlert("You have successfully sign in!");
+            $("#emailSI").val("");
+            $("#passwordSI").val("");
+            $("#navSignIn").text("Sign Out");
+            $("#navSignIn").attr("newName", "in");
+            $("#signInSection").css({display:"none"});
+            
+          })
+        .catch(function(error) {
             modalAlert(error.message);
         });
     }
@@ -93,13 +108,10 @@ firebase.auth().onAuthStateChanged(function(user) {
     name = user.displayName;
     email = user.email;
     uid = user.displayName;  
-    $("#navSignIn").text("Sign out");
     $("#uid").text(uid);
-    modalAlert("User sign In");
+
   }
-  else{
-      //user not signed in
-  }
+
 });
 /*
 * Events 
@@ -109,6 +121,14 @@ $("#signIn").click(function(event){
     event.preventDefault();
     console.log("sign in")
     signIn();
+});
+
+$("#navSignIn").click(function(event){
+    event.preventDefault();
+    console.log($("#navSignIn").attr("newName"));
+    if ($("#navSignIn").attr("newName")!="out") {
+        signOut();
+    }
 });
 
 //Function to recover password
@@ -142,7 +162,6 @@ $("#cancel").on("click", function(){
     $("#inputEmail").val("");
     $("#inputPassword").val("");
     $("#inputPassword2").val("");
-    
 });
 
 //Validation if user does not enter the same password at user registration
@@ -153,7 +172,7 @@ $("#modalRegistration").on("click", function(){
 
 });
 
-
+//Register user when user fill out the required fields.
 $("#register").on("click", function(){
     event.preventDefault();
     var displayName = $("#inputName").val().trim();
@@ -170,8 +189,6 @@ $("#register").on("click", function(){
     if(checkRegistrationModal(displayName,email,cp,password)){
         submitCreateAccount(displayName,email,cp,password)
     }
-
-    
 });
 
 
