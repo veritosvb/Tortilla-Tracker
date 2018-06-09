@@ -129,11 +129,10 @@ $(document).ready(function() {
                 //Gets the i'th ingredient name
                 let ingredient = "strIngredient"+i.toString();
                 let measure = "strMeasure"+i.toString();
-                console.log(drink[ingredient]);
                 //New list element to save the ingredient
                 let newli = $("<li>");
                 //If the ingredient is blank it is skipped
-                if(drink[ingredient] !== ""){
+                if(drink[ingredient] !== "" && drink[ingredient] !== null){
                     //Gets the measure and the ingredient and concatenates them, then adds them to the list element
                     newli.text(drink[measure] + ": "+drink[ingredient]);
                     ingredientList.append(newli);
