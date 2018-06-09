@@ -195,34 +195,15 @@ $("#register").on("click", function(){
 
 
 $("#cfsubmit").click(function(event){
-  modalAlert("Thank you for contacting us. We will gate in touch as soon as posible");
-
-   var name = $("#nameC").val().trim();
-   var email = $("#emailC").val().trim();
-   var country = $('#select-country').find(":selected").text();
-   var subject = $("#form-subject").val().trim();
-   var message = $("#messageC").val().trim();
-   
-   console.log(name);
-   console.log(email);
-   console.log(country);
-   console.log(subject);
-   console.log(message);
-   
-   firebase.database().ref("/contact").push({
-       name:name,
-       email:email,
-       country:country,
-       subject:subject,
-       message:message,
-   });
-
-   $("#error").modal('show');
-   $("#input-name").val("");
-   $("#input-email").val("");
-   $("#select-country").val("");
-   $("#form-subject").val("");
-   $("#form-text").val("");
+  
+var name = $("#nameC").val().trim();
+var email = $("#emailC").val().trim();
+var country = $('#select-country').find(":selected").text();
+var subject = $("#form-subject").val().trim();
+var message = $("#messageC").val().trim();
+if(checkContactForm(name,email,subject,message)){
+sentContactForm(name,email,country,subject,message);
+}
 
    });
    
@@ -233,3 +214,29 @@ function modalAlert(message){
     $("#error").modal('show');
 }
 
+//Function to validate contact form
+function checkContactForm(name,email,subject,message){
+    if (name != "" && email != "" && subject != "" && message != "") {
+    return true;
+    }
+    else {
+    modalAlert("Some required fields are missing!");
+    }
+    }
+    //Function to submit contact form after validation and reset fields to its original status after submission
+    function sentContactForm(name,email,country,subject,message) {
+    modalAlert("We appreciate you contacting us. One of our colleagues will get back to you shortly. Cheers!");
+    firebase.database().ref("/contact").push({
+    name:name,
+    email:email,
+    country:country,
+    subject:subject,
+    message:message,
+    });
+    $("#error").modal('show');
+    $("#nameC").val("");
+    $("#emailC").val("");
+    //$("#select-country").val("");
+    $("#form-subject").val("");
+    $("#messageC").val(""); 
+    }
