@@ -96,7 +96,8 @@ $(document).ready(function() {
 
     //Listens for a drink element press
     $(document).on('click','.drink-element',function(event){
-
+        $('.instructions-div').empty();
+        $('.ingredient-list').empty();
         console.log($(event.target).attr("drink-id"));
         //Saves the id of the clicked item on a variable
         let id = $(event.target).attr("drink-id");
