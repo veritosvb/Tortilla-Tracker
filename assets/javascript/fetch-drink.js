@@ -276,7 +276,7 @@ function ingredients(ingArray){
     key = "vqe373k5m24yguknhm2mqb6z";
     for (i=1; i<ingArray.length;i++){
     console.log(ingArray[i]);
-    var queryURL = "http://api.walmartlabs.com/v1/search?query=" + ingArray[i] +"&format=json&apiKey=" + key;
+    var queryURL = "https://api.walmartlabs.com/v1/search?query=" + ingArray[i] +"&format=json&apiKey=" + key;
     console.log(queryURL);
 
     $.ajax({
