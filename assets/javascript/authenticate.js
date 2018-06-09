@@ -109,6 +109,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     email = user.email;
     uid = user.displayName;  
     $("#uid").text(uid);
+    $("#uid").append('<i class="fas fa-user"></i>');
 
   }
 

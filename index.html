@@ -85,22 +85,21 @@
                               <select class="custom-select custom-select-m mb-3" id="drink-option">
                                 <optgroup>
                                     <option class="optionsize"selected>Pick something to drink!</option>
-                                    <option value="3">Amaretto</option>
-                                    <option value="5">beer</option>
-                                    <option value="5">brandy</option>
-                                    <option value="5">coffee</option>
+                                    <option value="1">Amaretto</option>
+                                    <option value="2">beer</option>
+                                    <option value="3">brandy</option>
+                                    <option value="4">coffee</option>
                                     <option value="5">Gin</option>
-                                    <option value="5">Irish cream</option>
-                                    <option value="5">Kahlua</option>
-                                    <option value="5">Midori</option>
-                                    <option value="5">Milk</option>
-                                    <option value="6">Rum</option>
-                                    <option value="5">Sambuca</option>
-                                    <option value="1">Tea</option>
-                                    <option value="1">Tequila</option>
-                                    <option value="4">Vodka</option>
-                                    <option value="2">Whisky</option>
-                                    <option value="7">Wine</option>
+                                    <option value="6">Irish cream</option>
+                                    <option value="7">Kahlua</option>
+                                    <option value="8">Milk</option>
+                                    <option value="9">Rum</option>
+                                    <option value="10">Sambuca</option>
+                                    <option value="11">Tea</option>
+                                    <option value="12">Tequila</option>
+                                    <option value="13">Vodka</option>
+                                    <option value="14">Whisky</option>
+                                    <option value="15">Wine</option>
                                 </optgroup>
                              </select>  
                             </li> 
@@ -168,16 +167,22 @@
                                     <ul class="navbar-nav ml-auto navbar-light2">
                                         <li class="nav-item">
                                             <form role="search" method="get" id="searchform" class="searchform" action="#" _lpchecked="1">
-                                                <div class="searchboxwrapper">
+                                                <div class="row">
                                                     <input class="searchbox" type="text" value="" name="s" placeholder="Search for" id="s">                                  
-                                                        <a>
+                                                        <a class ="social-buttons2">
                                                             <i class="fas fa-search call-drink2"></i>
                                                         </a>
                                                 </div>
                                             </form>
                                         </li>
                                         <li class="nav-item">
-                                             <div class="fb-share-button" data-href="https://veritosvb.github.io/Tortilla-Tracker/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="nav-link " target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fveritosvb.github.io%2FTortilla-Tracker%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+                        
+                                            </li>   
+                                        <li class="nav-item">
+                                            
+                                             <div class="row b-share-button" data-href="https://veritosvb.github.io/Tortilla-Tracker/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="nav-link " target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fveritosvb.github.io%2FTortilla-Tracker%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore "> <a class="social-buttons2" href="https://www.facebook.com/veritosvb">
+                                                <i class="fab fa-facebook-f"></i>
+                                                </a></div>
                                         </li>
                                     </ul>
                                 </div>
@@ -241,17 +246,20 @@
     </section>
 
 <!-- Start of favorites section -->
-    <section class="favorite-section container">
+    <section class="favorite-section container content-section text-center">
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 mx-auto transbox">
         <h2>Favorites</h2>
         <div class="favorite-images row">
             <div class="col">
-                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <div id="carouselExampleIndicators" class="carousel slide text-center" data-ride="carousel">
                     <ol class="carousel-indicators">
                         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
                     </ol>
                     <div class="carousel-inner">
                         <div class="carousel-item active">
-                            <img class="d-block w-100" src="..." alt="First slide">
+                            <img class="d-block w-100" src="" alt="">
                         </div>
                     </div>
                     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -265,6 +273,9 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
+
     </section>
 
            <!-- Contact Section -->
@@ -272,7 +283,7 @@
     <section id="contact" class="content-section text-center everyother">
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 mx-auto">
+                <div class="col-lg-8 mx-auto transbox">
                     <h2>Contact us</h2>
                     <form>
                         <div class="form-group">

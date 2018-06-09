@@ -88,6 +88,12 @@ body {
   
   .navbar-light2{
     color:black;
+   
+  }
+
+  .navbar-light2 div{
+    padding-left: 20px;
+
   }
   #mainNav a {
     color: white;
@@ -199,6 +205,26 @@ body {
     }
   }
   
+  @media (min-width: 768px) {
+    .masthead {
+      height: 100%;
+      padding: 0;
+    }
+    .masthead .intro-body .brand-heading {
+      font-size: 100px;
+    }
+    .masthead .intro-body .intro-text {
+      font-size: 22px;
+    }
+
+    .drink-info-image{
+      width: 400px;
+      height: 470px;
+      position: relative;
+      top: 50%;
+      left: 5%;
+    }
+  }
   
   @media (min-width: 992px) {
     .content-section {
@@ -321,6 +347,18 @@ body {
     border-radius: 100%;
     outline: none;
     background-color: gray;
+  }
+
+  .social-buttons2{
+    font-size: 20px;
+    line-height: 40px;
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: black;
+    border-radius: 100%;
+    outline: none;
+    background-color:#42DCA3;
   }
   
   ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
