@@ -203,50 +203,47 @@ body {
   }
   
   .btn {
-    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     font-weight: 400;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
     text-transform: uppercase;
-    border-radius: 0;
+
+    border-radius: 50px;
   }
 
   .btn-signIn {
-    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    border-radius: 90;
-    background-color: rgb(241, 46, 183);
+    background-color:rgb(46, 228, 241);
     color:lightgray;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
+    color:black;
+    border-radius: 50px;
   }
 
 
   .btn-ctf {
-    font-family: 'Cabin', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    border-radius: 90;
+  
     background-color: rgb(46, 228, 241);
     color:black;
     font-weight: bold;
-    font-size: 14px;
+    font-size: 20px;
+    border-radius: 50px;
   }
 
 
   .btn-signUp {
-    border-radius: 90;
     background-color: greenyellow;
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
+    border-radius: 50px;
 
   }
 
   .btn-cancel {
-    border-radius: 90;
     background-color: gainsboro;
     padding: 10px;
     padding-left: 50px;
     padding-right: 50px;
+    border-radius: 50px;
 
   }
   
@@ -254,6 +251,7 @@ body {
     color: #42DCA3;
     border: 1px solid #42DCA3;
     background-color: transparent;
+    border-radius: 50px;
   }
   
   .btn-default:focus, .btn-default:hover {
@@ -261,6 +259,7 @@ body {
     border: 1px solid #42DCA3;
     outline: none;
     background-color: #42DCA3;
+    border-radius: 50px;
   }
 
   .drink-image{
@@ -327,13 +326,15 @@ body {
 
   #fixadrink{
     background: url("../images/background3.jpg") no-repeat center center scroll;
-    color:  rgb(241, 46, 183);
+    color:  #42DCA3;
    
   }
 
    .transbox {
     margin: 30px;
     background-color: rgba(255, 255, 255, 0.342);
+    padding: 30px;
+    border-radius: 50px;
  
   }
 
