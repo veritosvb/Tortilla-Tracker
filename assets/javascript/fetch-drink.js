@@ -208,8 +208,8 @@ function ingredients(ingArray){
     console.log("name: " + itemName + " USD");
     console.log("price: "+ itemPrice + " USD");
     
-    $(".walmart-list").append(itemName);
-    $(".walmart-list").append(itemPrice);
+    $(".walmart-list").append("<ol>" + itemName + "----" + " $" + itemPrice + "<ol>" );
+    //$(".walmart-list").append(itemPrice);
 
     
 
