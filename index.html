@@ -59,7 +59,7 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a id="navSignIn" class="nav-link js-scroll-trigger" href="#signInSection">Sign In</a>
+                        <a id="navSignIn" class="nav-link js-scroll-trigger" href="#signInSection" newName="out">Sign In</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link js-scroll-trigger" href="#fixadrink">Fix a Drink</a> 
@@ -137,7 +137,7 @@
                             <a href="#" class="form-check-label" id="forgotPassword" data-toggle="modal" data-target="#forgotPasswordModal">Forgot your password?</a>
                         </div>
                         <div>
-                            <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
+                            <button type="submit" id="signIn" class="btn btn-signIn" href="#mainNav">Log In</button>
                         </div>
                     </form>
                 </div>
@@ -188,10 +188,10 @@
                 </div>
             </div>
         <!-- Div where the fetched drink data is inserted -->
-            <div class="row drink-images ">
+            <div class="row drink-images transbox">
             </div>
         <!-- Div that displays the information for a drink -->
-            <div class="drink-information container">
+            <div class="drink-information container transbox">
                 <div class="row">
                 <!-- Column for image and recipe -->
                     <div class="col-8 text-center">
@@ -200,7 +200,8 @@
                             <div class="card col-12">  
                                 <h5 class="card-header">Instructions</h5>
                                 <div class="card-body">
-                                        <div class="row instructions-div"></div>
+                                    <div class="row instructions-div">
+                                    </div>
                                 </div>
                             </div>
                          </div>
@@ -241,9 +242,29 @@
     </section>
 
 <!-- Start of favorites section -->
-    <section class="favorite-section">
-        <div class="favorite-images">
-
+    <section class="favorite-section container">
+        <h2>Favorites</h2>
+        <div class="favorite-images row">
+            <div class="col">
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="..." alt="First slide">
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
