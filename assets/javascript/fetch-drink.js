@@ -249,6 +249,7 @@ function updateFavorites(){
 //function that fetches ingrediets cost information from walmart api 
 
 function ingredients(ingArray){
+    $('.walmart-list').empty();
     key = "vqe373k5m24yguknhm2mqb6z";
     for (i=1; i<ingArray.length;i++){
     console.log(ingArray[i]);
