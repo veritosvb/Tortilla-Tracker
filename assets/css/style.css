@@ -267,7 +267,7 @@ body {
     max-width: 200px;
   }
   
-  #signUp {
+  #signUp, #forgotPasswordForm {
     padding-top: 10px;
     padding-bottom: 10px;
   }

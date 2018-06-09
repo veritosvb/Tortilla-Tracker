@@ -127,21 +127,26 @@
                         <div class="form-group">
                             <label for="exampleInputEmail1">Email address</label>
                             <input type="email" class="form-control" id="emailSI" aria-describedby="emailHelp" required>
-                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Password</label>
                             <input type="password" id="passwordSI"class="form-control" required>
                         </div>
                         <div class="form-check">
-                            <a href="#" class="form-check-label" id="forgotPassword">Forgot your password?</a>
+                            <a href="#" class="form-check-label" id="forgotPassword" data-toggle="modal" data-target="#forgotPasswordModal">Forgot your password?</a>
                         </div>
                         <div>
-                        <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
+                            <button type="submit" id="signIn" class="btn btn-signIn">Log In</button>
                         </div>
                     </form>
                 </div>
             </div>   
+            <div class="row">   
+                <div class="col-lg-8 mx-auto p-5">
+                    <a href="#" data-toggle="modal" data-target="#RegistrationModal">Not a member? Register Now!  </a> 
+                </div> 
+            </div>
             <div class="row">   
                 <div class="col-lg-8 mx-auto p-5">
                         <a href="#" data-toggle="modal" data-target="#RegistrationModal">Not a member? Register Now!  </a> 
@@ -205,15 +210,51 @@
                             <div class="card-body">
                                 <div class="card ingredient-list"></div>
                             </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="row">
-                        <div class="card col-12">
-                            <h5 class="card-header">Actions</h5>
-                            <div class="card-body">
-                                <button class="return btn btn-ctf">Return</button>
-                                <button class="favorite btn btn-ctf"><i class="favorite-icon far fa-heart"></i></button>
+                            <!-- Div that displays the information for a drink -->
+                            <div class="drink-information container">
+                                <div class="row">
+                                    <!-- Column for image and recipe -->
+                                    <div class="col-8 text-center">
+                                        <div class="row text-center"><img src="#" class="drink-info-image"></div>
+                                    </div>
+                                    <!-- Column for ingredients and activities -->
+                                    <div class="col-4">
+                                        <div class="row">
+                                            <div class="card col-12">    
+                                            <h5 class="card-header">Ingredients</h5>
+                                                <div class="card-body">
+                                                    <div class="card ingredient-list"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <br>
+
+                                        <div class="row">
+                                            <div class="card col-12">
+                                            <h5 class="card-header">Actions</h5>
+                                                <div class="card-body">
+                                                    <button class="return btn btn-ctf">Return</button>
+                                                    <button class="favorite btn btn-ctf"><i class="favorite-icon far fa-heart"></i></button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <div class="row p-3">
+                                        <div class="card col-12">
+                                            <h5 class="card-header">Instructions</h5>
+                                            <div class="card-body">
+                                                <div class="row instructions-div"></div>
+                                            </div>
+                                        </div>
+                                        <div class="card col-12">
+                                            <h5 class="card-header">Find all ingredients at Walmart!</h5>
+                                            <div class="card-body">
+                                                <div class="row walmart-list"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -320,9 +361,40 @@
                 </section>  
             </div>
         </div>
-        </div>
+    </div>
 </div>
 <!-- modal Sign Up -->
+
+<!-- modal Forgot password -start -->
+<div class="modal fade" id="forgotPasswordModal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title regText" id="ModalCenterTitle">RECOVER PASSWORD</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <section id="forgotPasswordForm" class="content-section">
+                    <div class= "container ">
+                        <form>
+                            <div class="form-group">
+                                <label for="inputEmailFP">Email address</label>
+                                <input type="email" class="form-control" id="inputEmailFP" placeholder="Enter email" required>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-cancel" data-dismiss="modal" id="cancelFP">CANCEL</button>
+                                <button type="button" class="btn btn-signUp" id="forgotPassBtn">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </section>  
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal Forgot password -end -->
 
 <!-- errors modal -->
 <div class="modal bd-example-modal-lg fade" id="error" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
