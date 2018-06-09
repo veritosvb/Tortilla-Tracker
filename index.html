@@ -172,25 +172,27 @@
                                 <div class="collapse navbar-collapse" id="navbarResponsive2">
                                     <ul class="navbar-nav ml-auto navbar-light2">
                                         <li class="nav-item">
-                                                <form role="search" method="get" id="searchform" class="searchform" action="#" _lpchecked="1">
-                                                    <div class="searchboxwrapper">
-                                
-                                                        <input class="searchbox" type="text" value="" name="s" placeholder="Search for" id="s">                                  
-                                                            <a>
+                                            <form role="search" method="get" id="searchform" class="searchform" action="#" _lpchecked="1">
+                                                <div class="searchboxwrapper">
+                                                    <input class="searchbox" type="text" value="" name="s" placeholder="Search for" id="s">                                  
+                                                        <a>
                                                             <i class="fas fa-search call-drink2"></i>
-                                                            </a>
-                                                    </div>
-                                                </form>
+                                                        </a>
+                                                </div>
+                                            </form>
                                         </li>
 
                                         <li class="nav-item">
                                              <div class="fb-share-button" data-href="https://veritosvb.github.io/Tortilla-Tracker/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="nav-link " target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fveritosvb.github.io%2FTortilla-Tracker%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
                                         </li>
-
                                     </ul>
                                 </div>
                             </div>
                         </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
         <!-- Div where the fetched drink data is inserted -->
         <div class="row drink-images ">
         </div>
@@ -198,7 +200,7 @@
         <div class="drink-information container">
             <div class="row">
                 <!-- Column for image and recipe -->
-                <div class="col-8">
+                <div class="col-8 text-center">
                     <div class="row"><img src="#" class="drink-info-image"></div>
                     <div class="row instructions-div"></div>
                 </div>
@@ -206,64 +208,41 @@
                 <div class="col-4">
                     <div class="row">
                         <div class="card col-12">    
-                        <h5 class="card-header">Ingredients</h5>
+                            <h5 class="card-header">Ingredients</h5>
                             <div class="card-body">
                                 <div class="card ingredient-list"></div>
                             </div>
-                            <!-- Div that displays the information for a drink -->
-                            <div class="drink-information container">
-                                <div class="row">
-                                    <!-- Column for image and recipe -->
-                                    <div class="col-8 text-center">
-                                        <div class="row text-center"><img src="#" class="drink-info-image"></div>
-                                    </div>
-                                    <!-- Column for ingredients and activities -->
-                                    <div class="col-4">
-                                        <div class="row">
-                                            <div class="card col-12">    
-                                            <h5 class="card-header">Ingredients</h5>
-                                                <div class="card-body">
-                                                    <div class="card ingredient-list"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <br>
+                            <br>
 
-                                        <div class="row">
-                                            <div class="card col-12">
-                                            <h5 class="card-header">Actions</h5>
-                                                <div class="card-body">
-                                                    <button class="return btn btn-ctf">Return</button>
-                                                    <button class="favorite btn btn-ctf"><i class="favorite-icon far fa-heart"></i></button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                    <div class="row p-3">
-                                        <div class="card col-12">
-                                            <h5 class="card-header">Instructions</h5>
-                                            <div class="card-body">
-                                                <div class="row instructions-div"></div>
-                                            </div>
-                                        </div>
-                                        <div class="card col-12">
-                                            <h5 class="card-header">Find all ingredients at Walmart!</h5>
-                                            <div class="card-body">
-                                                <div class="row walmart-list"></div>
-                                            </div>
-                                        </div>
+                            <div class="row">
+                                <div class="card col-12">
+                                    <h5 class="card-header">Actions</h5>
+                                    <div class="card-body">
+                                        <button class="return btn btn-ctf">Return</button>
+                                        <button class="favorite btn btn-ctf"><i class="favorite-icon far fa-heart"></i></button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                
+                    <div class="row p-3">
+                        <div class="card col-12">
+                            <h5 class="card-header">Instructions</h5>
+                            <div class="card-body">
+                                <div class="row instructions-div"></div>
+                            </div>
+                        </div>
+                        <div class="card col-12">
+                            <h5 class="card-header">Find all ingredients at Walmart!</h5>
+                            <div class="card-body">
+                                <div class="row walmart-list"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="row"></div>
     </section>
 
 <!-- Start of favorites section -->
@@ -306,17 +285,17 @@
                             <label for="InputText">Your Message:</label>
                             <textarea class="form-control" rows=10 placeholder="Description" id="messageC"></textarea> 
                         </div>
+                        <div class="row">
+                            <div class="col-lg-8 mx-auto">
+                                <button type="submit" class="btn btn-ctf" id="cfsubmit">Submit</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
-                <div class="row">
-                    <div class="col-lg-8 mx-auto">
-                        <button type="submit" class="btn btn-ctf" id="cfsubmit">Submit</button>
-                    </div>
-                </div>
-            </form>
         </div>
     </section>
-            <!-- End of contact form Section -->
+<!-- End of contact form Section -->
 
 <!-- Sign Up Section -->
 <div class="modal fade" id="RegistrationModal" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle" aria-hidden="true">
@@ -414,28 +393,28 @@
     <footer>
     <div class="container">
         <div class="row">
-        <div class="col-md-4">
-            <span class="copyright">Copyright &copy; 2018</span>
-        </div>
-        <div class="col-md-4">
-            <ul class="list-inline social-buttons">
-            <li class="list-inline-item">
-                <a href="https://twitter.com/veritosvb">
-                <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://www.facebook.com/veritosvb">
-                <i class="fab fa-facebook-f"></i>
-                </a>
-            </li>
-            <li class="list-inline-item">
-                <a href="https://www.linkedin.com/in/veronica-velez-a136a112/">
-                <i class="fab fa-linkedin"></i>
-                </a>
-            </li>
-            </ul>
-        </div>
+            <div class="col-md-4">
+                <span class="copyright">Copyright &copy; 2018</span>
+            </div>
+            <div class="col-md-4">
+                <ul class="list-inline social-buttons">
+                <li class="list-inline-item">
+                    <a href="https://twitter.com/veritosvb">
+                    <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.facebook.com/veritosvb">
+                    <i class="fab fa-facebook-f"></i>
+                    </a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="https://www.linkedin.com/in/veronica-velez-a136a112/">
+                    <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                </ul>
+            </div>
         </div>
     </div>
     </footer>
